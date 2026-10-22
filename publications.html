@@ -4,157 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | 郑洲洲课题组</title>
-    <!-- 引入 FontAwesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #fff; 
-        }
-        
-        /* 顶部导航栏 (保持原有风格) */
-        header { background-color: #fff; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 100; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.2em; font-weight: 700; color: #111; }
+        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
         nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { color: #555; font-size: 0.95em; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: all 0.2s; text-decoration: none; }
-        nav a:hover, nav a.active { color: #fff; background-color: #333; }
+        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        /* 主容器：改成全宽，取消原来的左右分栏 */
-        .main-container { 
-            max-width: 1000px; 
-            margin: 50px auto; 
-            padding: 0 30px; 
-        }
-
-        /* 标题部分 */
-        .page-title {
-            font-size: 42px;
-            font-weight: 700;
-            color: #222;
-            border-left: 8px solid #e5231b; /* 左侧红条 */
-            padding-left: 15px;
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-        .subtitle {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 40px;
-            padding-left: 23px; /* 对齐红线右侧 */
-        }
-        .subtitle a { color: #0056b3; text-decoration: none; }
-        .subtitle a:hover { text-decoration: underline; }
-
-        /* 分类标题 */
-        .section-title {
-            font-size: 1.8em;
-            font-weight: 400;
-            color: #222;
-            margin-bottom: 15px;
-        }
+        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+        .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 15px; line-height: 1.2; }
+        .subtitle { font-size: 1.1em; color: #333; margin-bottom: 40px; padding-left: 23px; }
+        .subtitle a { color: #0056b3; }
+        .section-title { font-size: 1.8em; font-weight: 400; color: #222; margin-bottom: 15px; }
         .section-title span { color: #888; font-size: 0.8em; }
 
-        /* 表格布局 */
-        .pub-table {
-            width: 100%;
-            border: 1px solid #dcdcdc;
-            margin-bottom: 50px;
-        }
-
-        /* 表头 */
-        .pub-header {
-            display: flex;
-            background-color: #5f6368; /* 深灰蓝色 */
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.05em;
-        }
+        .pub-table { width: 100%; border: 1px solid #dcdcdc; margin-bottom: 50px; }
+        .pub-header { display: flex; background-color: #5f6368; color: #fff; font-weight: 600; font-size: 1.05em; }
         .pub-header .col-no, .pub-header .col-info { padding: 12px 15px; }
-        
-        /* 数据行 */
-        .pub-row {
-            display: flex;
-            border-bottom: 1px solid #eaeaea;
-        }
+        .pub-row { display: flex; border-bottom: 1px solid #eaeaea; }
         .pub-row:last-child { border-bottom: none; }
-        
-        /* 斑马纹背景 */
         .pub-row:nth-child(odd) { background-color: #f9f9f9; }
         .pub-row:nth-child(even) { background-color: #ffffff; }
 
-        /* 编号列 */
-        .col-no {
-            flex: 0 0 70px;
-            text-align: center;
-            font-size: 1.1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-right: 1px solid #eaeaea;
-            color: #333;
-        }
-
-        /* 文章信息列 */
-        .col-info {
-            flex: 1;
-            padding: 20px 25px;
-        }
-
-        /* 文章标题链接 */
-        .pub-title {
-            font-size: 1.15em;
-            color: #1a73e8; /* 亮蓝色 */
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
+        .col-no { flex: 0 0 70px; text-align: center; font-size: 1.1em; display: flex; align-items: center; justify-content: center; border-right: 1px solid #eaeaea; color: #333; }
+        .col-info { flex: 1; padding: 20px 25px; }
+        .pub-title { font-size: 1.15em; color: #1a73e8; text-decoration: none; display: inline-block; margin-bottom: 10px; line-height: 1.4; }
         .pub-title:hover { text-decoration: underline; }
 
-        /* 作者、期刊、年份信息 */
-        .pub-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            color: #666;
-            font-size: 0.95em;
-        }
+        .pub-meta { display: flex; flex-wrap: wrap; gap: 20px; color: #666; font-size: 0.95em; }
         .meta-item { display: flex; align-items: center; gap: 6px; }
         .meta-item i { color: #888; font-size: 0.9em; }
-        
-        /* 高亮标签 */
-        .highlight {
-            background-color: #ffeeba;
-            color: #856404;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 0.75em;
-            font-weight: bold;
-            vertical-align: middle;
-            margin-left: 8px;
-        }
+        .highlight { background-color: #ffeeba; color: #856404; padding: 2px 6px; border-radius: 3px; font-size: 0.75em; font-weight: bold; vertical-align: middle; margin-left: 8px; }
 
-        /* 移动端适配 */
         @media (max-width: 768px) {
-            .pub-header { display: none; } /* 手机端隐藏表头 */
+            .pub-header { display: none; }
             .pub-row { flex-direction: column; }
-            .col-no { 
-                flex: none; 
-                width: 100%; 
-                text-align: left; 
-                padding: 10px 25px 0 25px; 
-                border-right: none;
-                font-size: 0.9em;
-                color: #888;
-            }
+            .col-no { flex: none; width: 100%; text-align: left; padding: 10px 25px 0 25px; border-right: none; font-size: 0.9em; color: #888; }
             .col-no::before { content: "Paper #"; }
             .col-info { padding: 10px 25px 20px 25px; }
             .pub-meta { flex-direction: column; gap: 8px; }
-            .page-title { font-size: 32px; }
+            .page-title { font-size: 36px; }
             nav ul { display: none; }
         }
     </style>
@@ -162,7 +58,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo">Zheng Lab</div>
+            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zheng Lab</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -178,17 +74,13 @@
     <div class="main-container">
         <h1 class="page-title">Publications</h1>
         <p class="subtitle">Please find our latest work on the <a href="#" target="_blank">Google Scholar</a> page.</p>
-        
         <h2 class="section-title">Journal papers <span>( 10 )</span></h2>
         
         <div class="pub-table">
-            <!-- 表头 -->
             <div class="pub-header">
                 <div class="col-no">No.</div>
                 <div class="col-info">Article Info</div>
             </div>
-
-            <!-- 列表开始 (按年份倒序排列) -->
             
             <div class="pub-row">
                 <div class="col-no">10</div>
@@ -201,7 +93,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">9</div>
                 <div class="col-info">
@@ -213,7 +104,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">8</div>
                 <div class="col-info">
@@ -225,7 +115,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">7</div>
                 <div class="col-info">
@@ -237,7 +126,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">6</div>
                 <div class="col-info">
@@ -249,7 +137,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">5</div>
                 <div class="col-info">
@@ -261,7 +148,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">4</div>
                 <div class="col-info">
@@ -273,7 +159,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">3</div>
                 <div class="col-info">
@@ -285,7 +170,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">2</div>
                 <div class="col-info">
@@ -297,7 +181,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="pub-row">
                 <div class="col-no">1</div>
                 <div class="col-info">
@@ -309,7 +192,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
