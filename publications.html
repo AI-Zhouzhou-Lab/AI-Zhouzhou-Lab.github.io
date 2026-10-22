@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | 郑洲洲课题组</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; background-color: #fff; }
+        a { color: #0056b3; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #003d82; text-decoration: underline; }
+
+        header { background-color: #fff; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2em; font-weight: 700; color: #111; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: #555; font-size: 0.95em; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: all 0.2s; }
+        nav a:hover, nav a.active { color: #fff; background-color: #333; text-decoration: none; }
+
+        .main-container { max-width: 1100px; margin: 50px auto; padding: 0 30px; display: flex; gap: 60px; align-items: flex-start; }
+        .sidebar { flex: 0 0 280px; position: sticky; top: 100px; }
+        .profile-img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; display: block; object-fit: cover; aspect-ratio: 3/4; }
+        .sidebar-info { list-style: none; }
+        .sidebar-info li { margin-bottom: 12px; font-size: 0.95em; color: #444; display: flex; align-items: flex-start; }
+        .sidebar-info .icon { margin-right: 12px; font-size: 1.1em; opacity: 0.7; }
+
+        .content { flex: 1; min-width: 0; }
+        .content h2 { font-size: 1.6em; font-weight: 600; color: #111; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #0056b3; }
+        
+        .pub-list { list-style: none; }
+        .pub-list li { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed #eaeaea; }
+        .pub-list li:last-child { border-bottom: none; }
+        .pub-title { font-weight: 600; color: #111; margin-bottom: 6px; font-size: 1.05em; }
+        .pub-authors { font-size: 0.95em; color: #555; margin-bottom: 6px; line-height: 1.5; }
+        .pub-journal { font-size: 0.9em; color: #444; }
+        .pub-journal em { color: #0056b3; font-style: italic; font-weight: 500; }
+        .highlight { background-color: #ffeeba; padding: 2px 6px; border-radius: 3px; font-size: 0.8em; color: #856404; font-weight: bold; }
+
+        @media (max-width: 900px) {
+            .main-container { flex-direction: column; gap: 40px; margin-top: 30px; }
+            .sidebar { flex: auto; position: static; width: 100%; max-width: 320px; margin: 0 auto; text-align: center; }
+            .sidebar-info li { justify-content: center; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Zheng Lab</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html" class="active">Publications</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <img src="https://via.placeholder.com/320x426?text=Zheng+Photo" alt="郑洲洲" class="profile-img">
+            <ul class="sidebar-info">
+                <li><span class="icon">🎓</span> 讲师、硕士生导师</li>
+                <li><span class="icon">🏫</span> 湖南农业大学机电工程学院</li>
+                <li><span class="icon">✉️</span> <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>代表性学术论文 (Selected Publications)</h2>
+            <p style="color:#666; margin-bottom:30px; font-size:0.95em;">* 第一作者或共同第一作者</p>
+
+            <ul class="pub-list">
+                <li>
+                    <div class="pub-title">Autonomous Navigation of Orchard Harvesting Robot via Light-weight Salient Object Detection</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Zheng Bin, Tang Lewei*, et al.</div>
+                    <div class="pub-journal"><em>Smart Agricultural Technology</em>, 2026: 102094. (中科院二区)</div>
+                </li>
+                <li>
+                    <div class="pub-title">AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting <span class="highlight">高被引论文</span></div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Hu Yaohua, Huang Yuxiang*, et al.</div>
+                    <div class="pub-journal"><em>Computers and Electronics in Agriculture</em>, 2023, 210: 107921. (中科院一区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">A novel jujube tree trunk and branch salient object detection method for catch-and-shake robotic visual perception</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Sun Shangpeng, Huang Yuxiang*, et al.</div>
+                    <div class="pub-journal"><em>Expert Systems with Applications</em>, 2024, 251: 124022. (中科院一区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">Graph Transformer with spatial-spectral features fusion for hyperspectral image classification</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Sun Shangpeng, Huang Yuxiang*, et al.</div>
+                    <div class="pub-journal"><em>Expert Systems with Applications</em>, 2025, 264: 125962. (中科院一区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">Characterising vibration patterns of winter jujube trees to optimise automated fruit harvesting</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Sun Shangpeng, Huang Yuxiang*, et al.</div>
+                    <div class="pub-journal"><em>Biosystems Engineering</em>, 2024, 248: 255-268. (中科院一区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">AFFU-Net: Attention feature fusion U-Net with hybrid loss for winter jujube crack detection</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Hu Yaohua, Huang Yuxiang*, et al.</div>
+                    <div class="pub-journal"><em>Computers and Electronics in Agriculture</em>, 2022, 198: 107049. (中科院一区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">HLU²-Net: a residual U-structure embedded U-Net with hybrid loss for tire defect inspection</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Yang Huanbo, Zhang Yan*, et al.</div>
+                    <div class="pub-journal"><em>IEEE Transactions on Instrumentation and Measurement</em>, 2021, 70: 1-11. (中科院二区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">Real-time detection of winter jujubes based on improved YOLOX-nano network</div>
+                    <div class="pub-authors"><strong>Zheng Zhouzhou</strong>, Hu Yaohua, Huang Yuxiang*, et al.</div>
+                    <div class="pub-journal"><em>Remote Sensing</em>, 2022, 14(19): 4833. (中科院二区)</div>
+                </li>
+                <li>
+                    <div class="pub-title">Vibration response characteristics of Jujube trees based on finite element method and structure-from-motion</div>
+                    <div class="pub-authors">Hu Yaohua*, <strong>Zheng Zhouzhou*</strong>, Yu Chenhao, et al. (共同第一作者)</div>
+                    <div class="pub-journal"><em>Scientia Horticulturae</em>, 2024, 331: 113125. (中科院二区top)</div>
+                </li>
+                <li>
+                    <div class="pub-title">抓摇式设施冬枣摘熟留青振动采收装置参数优化与试验</div>
+                    <div class="pub-authors"><strong>郑洲洲</strong>, 胡耀华, 赵鹏飞, 董建鑫, 黄玉祥*</div>
+                    <div class="pub-journal"><em>农业机械学报</em>, 2025, 56(01): 245-253. (EI)</div>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
