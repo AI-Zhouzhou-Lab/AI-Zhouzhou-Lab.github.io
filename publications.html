@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | 郑洲洲课题组</title>
+    <title>Publications | Zheng Lab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,13 +37,17 @@
         .col-info { flex: 1; padding: 20px 25px; }
         .pub-title { font-size: 1.15em; color: #1a73e8; text-decoration: none; display: inline-block; margin-bottom: 10px; line-height: 1.4; }
         .pub-title:hover { text-decoration: underline; }
-
         .pub-meta { display: flex; flex-wrap: wrap; gap: 20px; color: #666; font-size: 0.95em; }
         .meta-item { display: flex; align-items: center; gap: 6px; }
         .meta-item i { color: #888; font-size: 0.9em; }
         .highlight { background-color: #ffeeba; color: #856404; padding: 2px 6px; border-radius: 3px; font-size: 0.75em; font-weight: bold; vertical-align: middle; margin-left: 8px; }
 
+        /* 移动端适配 (修复导航栏隐藏问题) */
         @media (max-width: 768px) {
+            .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            nav a { font-size: 0.95em; }
+
             .pub-header { display: none; }
             .pub-row { flex-direction: column; }
             .col-no { flex: none; width: 100%; text-align: left; padding: 10px 25px 0 25px; border-right: none; font-size: 0.9em; color: #888; }
@@ -51,7 +55,6 @@
             .col-info { padding: 10px 25px 20px 25px; }
             .pub-meta { flex-direction: column; gap: 8px; }
             .page-title { font-size: 36px; }
-            nav ul { display: none; }
         }
     </style>
 </head>
@@ -75,13 +78,11 @@
         <h1 class="page-title">Publications</h1>
         <p class="subtitle">Please find our latest work on the <a href="#" target="_blank">Google Scholar</a> page.</p>
         <h2 class="section-title">Journal papers <span>( 10 )</span></h2>
-        
         <div class="pub-table">
             <div class="pub-header">
                 <div class="col-no">No.</div>
                 <div class="col-info">Article Info</div>
             </div>
-            
             <div class="pub-row">
                 <div class="col-no">10</div>
                 <div class="col-info">
