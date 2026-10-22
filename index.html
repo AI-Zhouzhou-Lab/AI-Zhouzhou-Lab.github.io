@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,15 +36,82 @@
         .institution { font-size: 1.1em; color: #666; margin-bottom: 25px; }
         .bio { font-size: 1.1em; color: #444; margin-bottom: 30px; text-align: justify; line-height: 1.8; }
         .content h2 { font-size: 1.15em; font-weight: 700; color: #222; margin-bottom: 20px; }
-        .interest-list { list-style: none; }
+        .interest-list { list-style: none; margin-bottom: 40px; }
         .interest-list li { margin-bottom: 15px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
         .interest-list li::before { content: "▶"; position: absolute; left: 0; top: 2px; color: #888; font-size: 0.8em; }
 
+        /* ====== 新增的 Recruiting 板块样式 ====== */
+        .recruit-section {
+            border-top: 1px solid #eaeaea;
+            padding-top: 30px;
+        }
+        
+        /* 带红条的二级标题 */
+        .recruit-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #222;
+            border-left: 6px solid #e5231b;
+            padding-left: 12px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .recruit-subtitle {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .recruit-text {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* 奖学金列表 */
+        .scholarship-title {
+            font-size: 1.05em;
+            color: #777;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .scholarship-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .scholarship-degree {
+            flex: 0 0 130px; /* 固定左侧分类的宽度 */
+            font-weight: 600;
+            color: #333;
+        }
+
+        .scholarship-links a {
+            color: #1a73e8;
+        }
+
+        /* 斜杠分隔符 */
+        .scholarship-links span.separator {
+            color: #999;
+            margin: 0 8px;
+        }
+
+        /* 移动端适配 */
         @media (max-width: 900px) {
             .main-container { flex-direction: column; gap: 40px; margin-top: 20px; }
             .sidebar { flex: auto; position: static; width: 100%; max-width: 300px; margin: 0 auto; }
             nav ul { display: none; }
             .content h1 { font-size: 2em; }
+            .scholarship-row { flex-direction: column; gap: 5px; }
+            .scholarship-degree { flex: none; }
         }
     </style>
 </head>
@@ -81,6 +148,7 @@
             <div class="bio">
                 I am a Lecturer in the College of Mechanical and Electrical Engineering at <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a>. I received my Ph.D. degree from the College of Mechanical and Electronic Engineering at Northwest A&F University in 2025. From 2023 to 2024, I was a joint Ph.D. student at <a href="https://www.mcgill.ca/" target="_blank">McGill University</a>, Canada, funded by the China Scholarship Council (CSC). My main research interests are to develop and adopt innovative sensing technologies and AI-driven computational methodologies for solving challenges in next-generation smart agriculture, specifically focusing on orchard harvesting robots.
             </div>
+            
             <h2>Specifically, my research interests include:</h2>
             <ul class="interest-list">
                 <li>Orchard harvesting robots and catch-and-shake strategies.</li>
@@ -89,6 +157,51 @@
                 <li>Vibration harvesting mechanism and equipment optimization for oil tea.</li>
                 <li>Agricultural robotics and automation.</li>
             </ul>
+
+            <!-- ====== 新增的 Recruiting 板块 ====== -->
+            <div class="recruit-section">
+                <h2 class="recruit-title">Recruiting</h2>
+                
+                <p class="recruit-subtitle">For Prospective Students / Postdocs</p>
+                
+                <p class="recruit-text">
+                    I am actively looking for strong and motivated students in the areas of deep learning, computer vision, agricultural robotics, and digital agriculture. Also, we welcome CSC-supported visiting students and professors. If you are interested in my research, please send me an <a href="mailto:zhengzz@hunau.edu.cn">email</a> with the subject of "Prospective PhD/Master student [Your name]", or apply through the <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a> system and mention me in your application. Due to the large volume of emails, I apologize for not replying to individual inquiries I have received.
+                </p>
+
+                <p class="scholarship-title">Scholarship opportunities :</p>
+
+                <!-- 博士 -->
+                <div class="scholarship-row">
+                    <div class="scholarship-degree">for <strong>PhD</strong> :</div>
+                    <div class="scholarship-links">
+                        <a href="#">CSC Scholarship</a> <span class="separator">/</span> 
+                        <a href="#">National Natural Science Foundation</a> <span class="separator">/</span> 
+                        <a href="#">Hunan Provincial Natural Science Foundation</a> <span class="separator">/</span> 
+                        <a href="#">HUNAU Presidential Scholarship</a>
+                    </div>
+                </div>
+
+                <!-- 硕士 -->
+                <div class="scholarship-row">
+                    <div class="scholarship-degree">for <strong>Master</strong> :</div>
+                    <div class="scholarship-links">
+                        <a href="#">National Scholarship</a> <span class="separator">/</span> 
+                        <a href="#">Academic Scholarship of HUNAU</a> <span class="separator">/</span> 
+                        <a href="#">Hunan Provincial Innovation Foundation</a>
+                    </div>
+                </div>
+
+                <!-- 本科生 -->
+                <div class="scholarship-row">
+                    <div class="scholarship-degree">for <strong>Undergraduate</strong> :</div>
+                    <div class="scholarship-links">
+                        <a href="#">National University Student Innovation Program</a> <span class="separator">/</span> 
+                        <a href="#">HUNAU SURE (Student Undergraduate Research Experience)</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ====== Recruiting 板块结束 ====== -->
+
         </main>
     </div>
 </body>
