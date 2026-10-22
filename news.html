@@ -7,16 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #f8f9fa; 
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* 顶部导航栏 */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
@@ -24,54 +18,19 @@
         nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        /* 主容器 */
         .main-container { max-width: 900px; margin: 60px auto; padding: 0 30px; }
-
-        /* 页面大标题带红条 */
-        .page-title {
-            font-size: 48px;
-            font-weight: 700;
-            color: #222;
-            border-left: 8px solid #e5231b;
-            padding-left: 15px;
-            margin-bottom: 60px;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-        }
-
-        /* 新闻列表容器 */
+        .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 60px; line-height: 1.2; letter-spacing: -0.5px; }
         .news-list { display: flex; flex-direction: column; gap: 45px; }
-
-        /* 单条新闻项 */
         .news-item { display: flex; flex-direction: column; }
+        .news-date { font-size: 1.2em; font-weight: 600; color: #555; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e5231b; letter-spacing: 0.5px; }
+        .news-card { background-color: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); font-size: 1.1em; color: #444; line-height: 1.8; text-align: justify; hyphens: auto; }
 
-        /* 新闻时间 */
-        .news-date {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #e5231b; /* 红色下划线 */
-            letter-spacing: 0.5px;
-        }
-
-        /* 新闻卡片 */
-        .news-card {
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04); /* 更柔和高级的阴影 */
-            font-size: 1.1em;
-            color: #444;
-            line-height: 1.8;
-            text-align: justify; /* 两端对齐，适合英文长段落 */
-            hyphens: auto;
-        }
-
-        /* 移动端适配 */
+        /* 移动端适配 (修复导航栏隐藏问题) */
         @media (max-width: 768px) {
-            nav ul { display: none; }
+            .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            nav a { font-size: 0.95em; }
+            
             .page-title { font-size: 36px; margin-bottom: 40px; }
             .news-date { font-size: 1.1em; }
             .news-card { padding: 20px; font-size: 1em; }
@@ -96,57 +55,43 @@
 
     <div class="main-container">
         <h1 class="page-title">News</h1>
-
         <div class="news-list">
-            
-            <!-- 2026-01 -->
             <div class="news-item">
                 <div class="news-date">2026-01</div>
                 <div class="news-card">
                     Prof. Zhouzhou Zheng's projects, "<strong>Research on Energy Transfer Characteristics of Vibrating Branches and Mechanisms of Flower/Fruit Abscission in Oil Tea</strong>" (Hunan Provincial Natural Science Foundation for Youth, 2026JJ60165) and the "<strong>Yuelushan Laboratory Joint Talent Introduction Project</strong>" (2025RC2065), have been officially approved. The projects will run until 2028 and 2027, respectively.
                 </div>
             </div>
-
-            <!-- 2025-11 -->
             <div class="news-item">
                 <div class="news-date">2025-11</div>
                 <div class="news-card">
                     Prof. Zhouzhou Zheng's project, "<strong>Mechanism of Flower and Fruit Transport and Abscission in Oil Tea Based on Trunk-Branch-Flower-Fruit-Leaf Interactions</strong>" (Excellent Youth Project of Hunan Provincial Department of Education, 25B0268), has been successfully approved.
                 </div>
             </div>
-
-            <!-- 2025-06 -->
             <div class="news-item">
                 <div class="news-date">2025-06</div>
                 <div class="news-card">
                     Prof. Zhouzhou Zheng was awarded the "<strong>Outstanding Doctoral Dissertation</strong>" by Northwest A&F University for his Ph.D. thesis.
                 </div>
             </div>
-
-            <!-- 2024-12 -->
             <div class="news-item">
                 <div class="news-date">2024-12</div>
                 <div class="news-card">
                     Prof. Zhouzhou Zheng successfully completed the National Construction of High-level University Public Graduate Program, finishing his one-year joint Ph.D. training at the Department of Bioresource Engineering, McGill University, Canada, and returned on schedule.
                 </div>
             </div>
-
-            <!-- 2024-06 -->
             <div class="news-item">
                 <div class="news-date">2024-06</div>
                 <div class="news-card">
                     Our paper, "<strong>AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting</strong>," has been selected as an ESI Highly Cited Paper. This research marks significant progress in visual perception for key areas in winter jujube vibration harvesting.
                 </div>
             </div>
-
-            <!-- 2022-01 -->
             <div class="news-item">
                 <div class="news-date">2022-01</div>
                 <div class="news-card">
                     The National Key R&D Program project "<strong>Breeding of New High-quality and High-yield Varieties of Jujube and Torreya and Precision Cultivation Technology</strong>" (2022YFD2200404) (in which our lab is a participant) has officially launched. The project period is from 2022 to 2027.
                 </div>
             </div>
-
         </div>
     </div>
 </body>
