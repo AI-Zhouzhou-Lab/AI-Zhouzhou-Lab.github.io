@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team | 郑洲洲课题组</title>
+    <title>Team | Zheng Lab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,25 +20,27 @@
 
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
-
         .team-section { margin-bottom: 60px; }
         .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
         .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
         .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
         .section-header span { font-size: 1.2em; color: #777; }
-
         .member-item { display: flex; gap: 30px; margin-bottom: 50px; }
         .member-photo { flex: 0 0 200px; height: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .member-info { flex: 1; }
         .member-name { font-size: 1.8em; font-weight: 400; color: #555; margin-bottom: 15px; }
         .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
 
+        /* 移动端适配 (修复导航栏隐藏问题) */
         @media (max-width: 768px) {
+            .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            nav a { font-size: 0.95em; }
+            
             .member-item { flex-direction: column; gap: 20px; align-items: center; }
             .member-photo { width: 200px; }
             .member-info { text-align: center; }
             .member-desc { text-align: left; }
-            nav ul { display: none; }
             .page-title { font-size: 36px; }
         }
     </style>
@@ -61,7 +63,6 @@
 
     <div class="main-container">
         <h1 class="page-title">Team</h1>
-
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-graduation-cap"></i>
@@ -91,14 +92,14 @@
                 <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student A" class="member-photo">
                 <div class="member-info">
                     <h3 class="member-name">Student A (学生 A)</h3>
-                    <div class="member-desc">个人介绍待添加 (Introduction to be added).<br><br>主要研究方向：基于深度学习的果实识别与定位。</div>
+                    <div class="member-desc">Introduction to be added.<br><br>Research interests: Deep learning-based fruit recognition and localization.</div>
                 </div>
             </div>
             <div class="member-item">
                 <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student B" class="member-photo">
                 <div class="member-info">
                     <h3 class="member-name">Student B (学生 B)</h3>
-                    <div class="member-desc">个人介绍待添加 (Introduction to be added).<br><br>主要研究方向：采摘机器人导航与路径规划。</div>
+                    <div class="member-desc">Introduction to be added.<br><br>Research interests: Navigation and path planning for harvesting robots.</div>
                 </div>
             </div>
         </div>
