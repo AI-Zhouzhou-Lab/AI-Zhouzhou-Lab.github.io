@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | 郑洲洲课题组</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; background-color: #fff; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background-color: #fff; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2em; font-weight: 700; color: #111; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: #555; font-size: 0.95em; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: all 0.2s; }
+        nav a:hover, nav a.active { color: #fff; background-color: #333; text-decoration: none; }
+
+        .main-container { max-width: 1100px; margin: 50px auto; padding: 0 30px; display: flex; gap: 60px; align-items: flex-start; }
+        .sidebar { flex: 0 0 280px; position: sticky; top: 100px; }
+        .profile-img { width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px; display: block; object-fit: cover; aspect-ratio: 3/4; }
+        .sidebar-info { list-style: none; }
+        .sidebar-info li { margin-bottom: 12px; font-size: 0.95em; color: #444; display: flex; align-items: flex-start; }
+        .sidebar-info .icon { margin-right: 12px; font-size: 1.1em; opacity: 0.7; }
+
+        .content { flex: 1; min-width: 0; }
+        .content h2 { font-size: 1.6em; font-weight: 600; color: #111; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #0056b3; }
+        
+        .team-section { margin-bottom: 40px; }
+        .team-section h3 { font-size: 1.2em; color: #444; margin-bottom: 20px; }
+        
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px; }
+        .member-card { background: #fff; border: 1px solid #eaeaea; border-radius: 8px; padding: 20px; text-align: center; transition: box-shadow 0.2s; }
+        .member-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .member-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 2px solid #f0f0f0; }
+        .member-name { font-size: 1.1em; font-weight: 600; color: #111; margin-bottom: 4px; }
+        .member-role { font-size: 0.85em; color: #0056b3; font-weight: 500; margin-bottom: 8px; }
+        .member-desc { font-size: 0.85em; color: #666; line-height: 1.5; }
+
+        @media (max-width: 900px) {
+            .main-container { flex-direction: column; gap: 40px; margin-top: 30px; }
+            .sidebar { flex: auto; position: static; width: 100%; max-width: 320px; margin: 0 auto; text-align: center; }
+            .sidebar-info li { justify-content: center; }
+            nav ul { display: none; }
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">Zheng Lab</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <img src="https://via.placeholder.com/320x426?text=Zheng+Photo" alt="郑洲洲" class="profile-img">
+            <ul class="sidebar-info">
+                <li><span class="icon">🎓</span> 讲师、硕士生导师</li>
+                <li><span class="icon">🏫</span> 湖南农业大学机电工程学院</li>
+                <li><span class="icon">✉️</span> <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>课题组成员 (Lab Members)</h2>
+
+            <div class="team-section">
+                <h3>教师团队 (Faculty)</h3>
+                <div class="team-grid">
+                    <div class="member-card">
+                        <!-- 替换为郑老师的真实照片文件名，如 zheng.jpg -->
+                        <img src="https://via.placeholder.com/150?text=Zheng" alt="郑洲洲" class="member-img">
+                        <div class="member-name">郑洲洲</div>
+                        <div class="member-role">讲师 / 硕导 / 负责人</div>
+                        <div class="member-desc">林果采收机器人、果园信息感知</div>
+                    </div>
+                    <!-- 这里可以继续添加其他老师的卡片 -->
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h3>研究生团队 (Graduate Students)</h3>
+                <div class="team-grid">
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150?text=Student+A" alt="学生A" class="member-img">
+                        <div class="member-name">学生 A</div>
+                        <div class="member-role">2024级硕士生</div>
+                        <div class="member-desc">基于深度学习的果实识别</div>
+                    </div>
+                    <div class="member-card">
+                        <img src="https://via.placeholder.com/150?text=Student+B" alt="学生B" class="member-img">
+                        <div class="member-name">学生 B</div>
+                        <div class="member-role">2023级硕士生</div>
+                        <div class="member-desc">采摘机器人导航与规划</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
