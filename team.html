@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team | Zheng Lab</title>
+    <title>Join Us | Zheng Lab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,30 +18,25 @@
         nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+        .main-container { max-width: 1100px; margin: 50px auto; padding: 0 30px; }
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
-        .team-section { margin-bottom: 60px; }
-        .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
-        .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
-        .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
-        .section-header span { font-size: 1.2em; color: #777; }
-        .member-item { display: flex; gap: 30px; margin-bottom: 50px; }
-        .member-photo { flex: 0 0 200px; height: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .member-info { flex: 1; }
-        .member-name { font-size: 1.8em; font-weight: 400; color: #555; margin-bottom: 15px; }
-        .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
+        .join-container { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+        .join-photo-wrapper { flex: 0 0 45%; width: 100%; }
+        .join-photo { width: 100%; border-radius: 8px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 4/3; display: block; }
+        .join-text { flex: 1; font-size: 1.15em; line-height: 1.8; color: #444; text-align: left; }
+        .join-text p { margin-bottom: 25px; }
+        .highlight-bold { font-weight: 600; color: #222; }
 
         /* 移动端适配 (修复导航栏隐藏问题) */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
             nav a { font-size: 0.95em; }
-            
-            .member-item { flex-direction: column; gap: 20px; align-items: center; }
-            .member-photo { width: 200px; }
-            .member-info { text-align: center; }
-            .member-desc { text-align: left; }
+
             .page-title { font-size: 36px; }
+            .join-container { flex-direction: column; gap: 40px; }
+            .join-photo-wrapper { flex: auto; width: 100%; }
+            .join-text { font-size: 1.05em; }
         }
     </style>
 </head>
@@ -53,54 +48,25 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="team.html">Team</a></li>
                     <li><a href="publications.html">Publications</a></li>
-                    <li><a href="joinus.html">Join Us</a></li>
+                    <li><a href="joinus.html" class="active">Join Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="main-container">
-        <h1 class="page-title">Team</h1>
-        <div class="team-section">
-            <div class="section-header">
-                <i class="fas fa-graduation-cap"></i>
-                <h2>Faculty</h2>
-                <span>members</span>
+        <h1 class="page-title">Join Us !</h1>
+        <div class="join-container">
+            <div class="join-photo-wrapper">
+                <img src="https://via.placeholder.com/800x600?text=Lab+Group+Photo" alt="Lab Group Photo" class="join-photo">
             </div>
-            <div class="member-item">
-                <img src="zheng.jpg" alt="Zhouzhou Zheng" class="member-photo">
-                <div class="member-info">
-                    <h3 class="member-name">Zhouzhou Zheng (郑洲洲)</h3>
-                    <div class="member-desc">
-                        Zhouzhou Zheng is a Lecturer and Master's Supervisor at the College of Mechanical and Electrical Engineering, Hunan Agricultural University. He received his Ph.D. in Agricultural Mechanization Engineering from Northwest A&F University in June 2025. From 2023 to 2024, he was a joint Ph.D. student at McGill University in Canada, funded by the China Scholarship Council (CSC).
-                        <br><br>
-                        His research focuses on orchard harvesting robots, orchard information perception technology, and fruit tree phenotyping. He has published over 10 SCI papers as the first author in top journals such as <em>Computers and Electronics in Agriculture</em> and <em>Expert Systems with Applications</em>, including 6 papers in JCR Q1 with a cumulative impact factor of 87.1. He serves as a youth editorial board member for <em>Plant Phenomics</em> and a guest editor for <em>Agronomy</em> and <em>Sustainability</em>.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="team-section">
-            <div class="section-header">
-                <i class="fas fa-user-graduate"></i>
-                <h2>Graduate</h2>
-                <span>students</span>
-            </div>
-            <div class="member-item">
-                <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student A" class="member-photo">
-                <div class="member-info">
-                    <h3 class="member-name">Student A (学生 A)</h3>
-                    <div class="member-desc">Introduction to be added.<br><br>Research interests: Deep learning-based fruit recognition and localization.</div>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student B" class="member-photo">
-                <div class="member-info">
-                    <h3 class="member-name">Student B (学生 B)</h3>
-                    <div class="member-desc">Introduction to be added.<br><br>Research interests: Navigation and path planning for harvesting robots.</div>
-                </div>
+            <div class="join-text">
+                <p>We are actively recruiting self-motivated Master's and PhD students, postdoctoral researchers, and research interns with a strong background in agricultural engineering, agricultural robotics, machine vision, and deep learning.</p>
+                <p>Our research group focuses on next-generation smart agriculture, specifically in orchard harvesting robots, multi-modal sensing, and AI-driven methodologies. We provide a dynamic and highly supportive environment for your academic and professional growth.</p>
+                <p>If you are interested in joining us, please send your CV and a brief statement of research interests to Prof. Zhouzhou Zheng via email at <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a> with the subject line:</p>
+                <p><span class="highlight-bold">'Prospective [Position] – [Your Name]'</span></p>
             </div>
         </div>
     </div>
