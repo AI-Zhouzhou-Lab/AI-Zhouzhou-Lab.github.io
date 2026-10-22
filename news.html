@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News | 郑洲洲课题组</title>
+    <title>News | Zheng Lab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f8f9fa; 
+        }
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
+        /* 顶部导航栏 */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
@@ -18,18 +24,57 @@
         nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
-        .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
+        /* 主容器 */
+        .main-container { max-width: 900px; margin: 60px auto; padding: 0 30px; }
 
-        .news-list { display: flex; flex-direction: column; gap: 40px; }
-        .news-date { font-size: 1.3em; color: #777; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 2px solid #e5231b; }
-        .news-card { background-color: #fff; border-radius: 6px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 1.1em; color: #333; line-height: 1.7; text-align: justify; }
+        /* 页面大标题带红条 */
+        .page-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #222;
+            border-left: 8px solid #e5231b;
+            padding-left: 15px;
+            margin-bottom: 60px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
 
+        /* 新闻列表容器 */
+        .news-list { display: flex; flex-direction: column; gap: 45px; }
+
+        /* 单条新闻项 */
+        .news-item { display: flex; flex-direction: column; }
+
+        /* 新闻时间 */
+        .news-date {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5231b; /* 红色下划线 */
+            letter-spacing: 0.5px;
+        }
+
+        /* 新闻卡片 */
+        .news-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04); /* 更柔和高级的阴影 */
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.8;
+            text-align: justify; /* 两端对齐，适合英文长段落 */
+            hyphens: auto;
+        }
+
+        /* 移动端适配 */
         @media (max-width: 768px) {
             nav ul { display: none; }
-            .page-title { font-size: 36px; }
+            .page-title { font-size: 36px; margin-bottom: 40px; }
             .news-date { font-size: 1.1em; }
-            .news-card { padding: 15px; font-size: 1em; }
+            .news-card { padding: 20px; font-size: 1em; }
         }
     </style>
 </head>
@@ -51,31 +96,57 @@
 
     <div class="main-container">
         <h1 class="page-title">News</h1>
+
         <div class="news-list">
+            
+            <!-- 2026-01 -->
             <div class="news-item">
                 <div class="news-date">2026-01</div>
-                <div class="news-card">郑洲洲老师主持的“湖南省自然科学基金青年基金项目（2026JJ60165）：振枝式油茶枝条能量传递特性与花果脱落机理研究”以及“岳麓山实验室联合引进人才项目（2025RC2065）”正式获批立项，项目周期分别至 2028 年和 2027 年。</div>
+                <div class="news-card">
+                    Prof. Zhouzhou Zheng's projects, "<strong>Research on Energy Transfer Characteristics of Vibrating Branches and Mechanisms of Flower/Fruit Abscission in Oil Tea</strong>" (Hunan Provincial Natural Science Foundation for Youth, 2026JJ60165) and the "<strong>Yuelushan Laboratory Joint Talent Introduction Project</strong>" (2025RC2065), have been officially approved. The projects will run until 2028 and 2027, respectively.
+                </div>
             </div>
+
+            <!-- 2025-11 -->
             <div class="news-item">
                 <div class="news-date">2025-11</div>
-                <div class="news-card">郑洲洲老师主持的“湖南省教育厅优秀青年项目（25B0268）：基于杆-枝-花-果-叶互作的油茶花果运移与脱落机制研究”成功获批立项。</div>
+                <div class="news-card">
+                    Prof. Zhouzhou Zheng's project, "<strong>Mechanism of Flower and Fruit Transport and Abscission in Oil Tea Based on Trunk-Branch-Flower-Fruit-Leaf Interactions</strong>" (Excellent Youth Project of Hunan Provincial Department of Education, 25B0268), has been successfully approved.
+                </div>
             </div>
+
+            <!-- 2025-06 -->
             <div class="news-item">
                 <div class="news-date">2025-06</div>
-                <div class="news-card">郑洲洲老师的博士学位论文荣获西北农林科技大学“校优秀博士学位论文”。</div>
+                <div class="news-card">
+                    Prof. Zhouzhou Zheng was awarded the "<strong>Outstanding Doctoral Dissertation</strong>" by Northwest A&F University for his Ph.D. thesis.
+                </div>
             </div>
+
+            <!-- 2024-12 -->
             <div class="news-item">
                 <div class="news-date">2024-12</div>
-                <div class="news-card">郑洲洲老师圆满完成国家建设高水平大学公派研究生项目，结束在加拿大麦吉尔大学（McGill University）生物资源工程系为期一年的博士联合培养，按期回国。</div>
+                <div class="news-card">
+                    Prof. Zhouzhou Zheng successfully completed the National Construction of High-level University Public Graduate Program, finishing his one-year joint Ph.D. training at the Department of Bioresource Engineering, McGill University, Canada, and returned on schedule.
+                </div>
             </div>
+
+            <!-- 2024-06 -->
             <div class="news-item">
                 <div class="news-date">2024-06</div>
-                <div class="news-card">课题组论文《AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting》入选 ESI 高被引论文。该研究在冬枣振动采收关键区域视觉感知方面取得重要进展。</div>
+                <div class="news-card">
+                    Our paper, "<strong>AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting</strong>," has been selected as an ESI Highly Cited Paper. This research marks significant progress in visual perception for key areas in winter jujube vibration harvesting.
+                </div>
             </div>
+
+            <!-- 2022-01 -->
             <div class="news-item">
                 <div class="news-date">2022-01</div>
-                <div class="news-card">课题组参与的国家重点研发计划课题“枣和香榧优质高产新品种创制与精准栽培技术（2022YFD2200404）”正式启动，项目周期为 2022 年至 2027 年。</div>
+                <div class="news-card">
+                    The National Key R&D Program project "<strong>Breeding of New High-quality and High-yield Varieties of Jujube and Torreya and Precision Cultivation Technology</strong>" (2022YFD2200404) (in which our lab is a participant) has officially launched. The project period is from 2022 to 2027.
+                </div>
             </div>
+
         </div>
     </div>
 </body>
