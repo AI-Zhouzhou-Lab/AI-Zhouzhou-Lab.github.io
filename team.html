@@ -4,95 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team | 郑洲洲课题组</title>
-    <!-- 引入 FontAwesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #fff; 
-        }
-        
-        /* 顶部导航栏 - 改成截图里的纯文本样式 */
-        header { background-color: #fff; border-bottom: 1px solid #eaeaea; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1000px; margin: 0 auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.3em; font-weight: 700; color: #111; display: flex; align-items: center; gap: 8px;}
-        .logo span { color: #c8232c; } /* 红色点缀 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
         nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { color: #333; font-size: 1em; text-decoration: none; transition: color 0.2s; }
-        nav a:hover, nav a.active { color: #c8232c; } /* 激活状态和悬停变成红色 */
+        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        /* 主容器 */
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+        .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
 
-        /* 页面大标题带红条 */
-        .page-title {
-            font-size: 48px;
-            font-weight: 700;
-            color: #222;
-            border-left: 8px solid #c8232c; /* 左侧红条 */
-            padding-left: 15px;
-            margin-bottom: 50px;
-            line-height: 1.2;
-        }
-
-        /* 分类板块 */
         .team-section { margin-bottom: 60px; }
-        
-        /* 分类标题：图标 + 文字 + 底部红线 */
-        .section-header {
-            display: flex;
-            align-items: center;
-            border-bottom: 2px solid #c8232c; /* 底部红线 */
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-        .section-header i { color: #c8232c; font-size: 1.5em; margin-right: 15px; }
+        .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
+        .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
         .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
         .section-header span { font-size: 1.2em; color: #777; }
 
-        /* 成员卡片：左图右文 */
-        .member-item {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        /* 左侧照片 */
-        .member-photo {
-            flex: 0 0 200px; /* 固定宽度 */
-            height: 250px;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+        .member-item { display: flex; gap: 30px; margin-bottom: 50px; }
+        .member-photo { flex: 0 0 200px; height: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .member-info { flex: 1; }
+        .member-name { font-size: 1.8em; font-weight: 400; color: #555; margin-bottom: 15px; }
+        .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
 
-        /* 右侧信息 */
-        .member-info {
-            flex: 1;
-        }
-        .member-name {
-            font-size: 1.8em;
-            font-weight: 400;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        .member-desc {
-            color: #555;
-            font-size: 1.05em;
-            line-height: 1.8;
-            text-align: justify;
-        }
-
-        /* 移动端适配 */
         @media (max-width: 768px) {
             .member-item { flex-direction: column; gap: 20px; align-items: center; }
             .member-photo { width: 200px; }
             .member-info { text-align: center; }
             .member-desc { text-align: left; }
-            nav ul { display: none; } /* 手机端隐藏导航 */
+            nav ul { display: none; }
             .page-title { font-size: 36px; }
         }
     </style>
@@ -100,7 +46,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo"><i class="fas fa-leaf" style="color: #c8232c;"></i> Zheng <span>Lab</span></div>
+            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zheng Lab</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -116,17 +62,13 @@
     <div class="main-container">
         <h1 class="page-title">Team</h1>
 
-        <!-- 教师团队板块 -->
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-graduation-cap"></i>
                 <h2>Faculty</h2>
                 <span>members</span>
             </div>
-
-            <!-- 郑老师 -->
             <div class="member-item">
-                <!-- 使用郑老师的照片 -->
                 <img src="zheng.jpg" alt="Zhouzhou Zheng" class="member-photo">
                 <div class="member-info">
                     <h3 class="member-name">Zhouzhou Zheng (郑洲洲)</h3>
@@ -139,42 +81,26 @@
             </div>
         </div>
 
-        <!-- 研究生团队板块 -->
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-user-graduate"></i>
                 <h2>Graduate</h2>
                 <span>students</span>
             </div>
-
-            <!-- 学生 A -->
             <div class="member-item">
-                <!-- 灰色占位图 -->
                 <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student A" class="member-photo">
                 <div class="member-info">
                     <h3 class="member-name">Student A (学生 A)</h3>
-                    <div class="member-desc">
-                        个人介绍待添加 (Introduction to be added).
-                        <br><br>
-                        主要研究方向：基于深度学习的果实识别与定位。
-                    </div>
+                    <div class="member-desc">个人介绍待添加 (Introduction to be added).<br><br>主要研究方向：基于深度学习的果实识别与定位。</div>
                 </div>
             </div>
-
-            <!-- 学生 B -->
             <div class="member-item">
-                <!-- 灰色占位图 -->
                 <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student B" class="member-photo">
                 <div class="member-info">
                     <h3 class="member-name">Student B (学生 B)</h3>
-                    <div class="member-desc">
-                        个人介绍待添加 (Introduction to be added).
-                        <br><br>
-                        主要研究方向：采摘机器人导航与路径规划。
-                    </div>
+                    <div class="member-desc">个人介绍待添加 (Introduction to be added).<br><br>主要研究方向：采摘机器人导航与路径规划。</div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
