@@ -4,164 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhouzhou Zheng | Hunan Agricultural University</title>
-    <!-- 引入 FontAwesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            line-height: 1.6; 
-            color: #333; 
-            background-color: #f8f9fa; /* 浅灰色背景，增加高级感 */
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* 顶部导航栏：还原截图里的白底纯文本样式 */
-        header { 
-            background-color: #ffffff; 
-            position: sticky; 
-            top: 0; 
-            z-index: 100; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 底部淡阴影 */
-        }
-        .nav-container { 
-            max-width: 1100px; 
-            margin: 0 auto; 
-            padding: 15px 30px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-        }
-        .logo { 
-            font-size: 1.4em; 
-            font-weight: 700; 
-            color: #222; 
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo span { color: #c8232c; } /* 点缀红色 */
-        
-        nav ul { list-style: none; display: flex; gap: 35px; }
-        nav a { 
-            color: #333; 
-            font-size: 1.05em; 
-            font-weight: 400;
-            transition: color 0.2s; 
-        }
-        nav a:hover, nav a.active { 
-            color: #c8232c; /* 当前页或悬停时变红 */
-            text-decoration: none;
-        }
+        /* 导航栏 */
+        header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        /* 主布局：左右分栏 */
-        .main-container { 
-            max-width: 1100px; 
-            margin: 40px auto; 
-            padding: 0 30px; 
-            display: flex; 
-            gap: 60px; 
-            align-items: flex-start; 
-        }
-
-        /* 左侧边栏 */
-        .sidebar { 
-            flex: 0 0 280px; 
-            position: sticky; 
-            top: 100px; 
-        }
-        
-        /* 照片加一圈细边框 */
-        .profile-img { 
-            width: 100%; 
-            border: 1px solid #eaeaea;
-            padding: 5px; /* 模拟截图里照片周围的留白边框 */
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-            margin-bottom: 25px; 
-            display: block; 
-            object-fit: cover; 
-            aspect-ratio: 3/4; 
-        }
-        
-        /* 联系方式列表 */
-        .sidebar-info { list-style: none; margin-top: 20px;}
-        .sidebar-info li { 
-            margin-bottom: 15px; 
-            font-size: 1em; 
-            color: #555; 
-            display: flex; 
-            align-items: flex-start; 
-            line-height: 1.4;
-        }
-        .sidebar-info .icon { 
-            width: 25px;
-            margin-right: 10px; 
-            font-size: 1.2em; 
-            color: #222; 
-            text-align: center;
-        }
+        /* 主体布局 */
+        .main-container { max-width: 1100px; margin: 40px auto; padding: 0 30px; display: flex; gap: 60px; align-items: flex-start; }
+        .sidebar { flex: 0 0 280px; position: sticky; top: 100px; }
+        .profile-img { width: 100%; border: 1px solid #eaeaea; padding: 5px; background-color: #fff; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 25px; display: block; object-fit: cover; aspect-ratio: 3/4; }
+        .sidebar-info { list-style: none; margin-top: 20px; }
+        .sidebar-info li { margin-bottom: 15px; font-size: 1em; color: #555; display: flex; align-items: flex-start; line-height: 1.4; }
+        .sidebar-info .icon { width: 25px; margin-right: 10px; font-size: 1.2em; color: #222; text-align: center; }
         .sidebar-info a { color: #555; }
-        .sidebar-info a:hover { color: #1a73e8; text-decoration: none;}
+        .sidebar-info a:hover { color: #1a73e8; text-decoration: none; }
 
-        /* 右侧主内容 */
+        /* 右侧内容 */
         .content { flex: 1; min-width: 0; }
-        
-        .content h1 { 
-            font-size: 2.4em; 
-            font-weight: 700; 
-            color: #222; 
-            margin-bottom: 15px; 
-        }
-        .subtitle { 
-            font-size: 1.2em; 
-            color: #666; 
-            margin-bottom: 5px; 
-        }
-        .institution {
-            font-size: 1.1em;
-            color: #666;
-            margin-bottom: 25px;
-        }
-        
-        /* 简介正文 */
-        .bio { 
-            font-size: 1.1em; 
-            color: #444; 
-            margin-bottom: 30px; 
-            text-align: justify; 
-            line-height: 1.8;
-        }
-        
-        /* 小标题 */
-        .content h2 { 
-            font-size: 1.15em; 
-            font-weight: 700; 
-            color: #222; 
-            margin-bottom: 20px; 
-        }
-
-        /* 研究方向列表 (带三角形) */
+        .content h1 { font-size: 2.4em; font-weight: 700; color: #222; margin-bottom: 15px; }
+        .subtitle { font-size: 1.2em; color: #666; margin-bottom: 5px; }
+        .institution { font-size: 1.1em; color: #666; margin-bottom: 25px; }
+        .bio { font-size: 1.1em; color: #444; margin-bottom: 30px; text-align: justify; line-height: 1.8; }
+        .content h2 { font-size: 1.15em; font-weight: 700; color: #222; margin-bottom: 20px; }
         .interest-list { list-style: none; }
-        .interest-list li { 
-            margin-bottom: 15px; 
-            position: relative; 
-            padding-left: 25px; 
-            color: #444; 
-            font-size: 1.05em;
-        }
-        .interest-list li::before { 
-            content: "▶"; /* 实心三角形 */
-            position: absolute; 
-            left: 0; 
-            top: 2px; 
-            color: #888; 
-            font-size: 0.8em; 
-        }
+        .interest-list li { margin-bottom: 15px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
+        .interest-list li::before { content: "▶"; position: absolute; left: 0; top: 2px; color: #888; font-size: 0.8em; }
 
-        /* 移动端适配 */
         @media (max-width: 900px) {
             .main-container { flex-direction: column; gap: 40px; margin-top: 20px; }
             .sidebar { flex: auto; position: static; width: 100%; max-width: 300px; margin: 0 auto; }
@@ -171,12 +49,9 @@
     </style>
 </head>
 <body>
-    <!-- 顶部导航栏 -->
     <header>
         <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-university" style="color: #c8232c;"></i> Zheng <span>Lab</span>
-            </div>
+            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zheng Lab</div>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -189,30 +64,23 @@
         </div>
     </header>
 
-    <!-- 主内容区 -->
     <div class="main-container">
-        
-        <!-- 左侧边栏：照片与联系方式 -->
         <aside class="sidebar">
             <img src="zheng.jpg" alt="Zhouzhou Zheng" class="profile-img">
-            
             <ul class="sidebar-info">
-                <li><span class="icon"><i class="fa-brands fa-google"></i></span> <a href="#" target="_blank">Google Scholar</a></li>
+                <li><span class="icon"><i class="fa-brands fa-google"></i></span> <a href="#">Google Scholar</a></li>
                 <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a></li>
                 <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> College of Mechanical and Electrical Engineering, Hunan Agricultural University, Changsha, China</li>
             </ul>
         </aside>
 
-        <!-- 右侧核心内容 -->
         <main class="content">
             <h1>Zhouzhou Zheng, Ph.D.</h1>
             <p class="subtitle">Lecturer, Master's Supervisor</p>
             <p class="institution">Department of Agricultural Engineering, Hunan Agricultural University</p>
-            
             <div class="bio">
                 I am a Lecturer in the College of Mechanical and Electrical Engineering at <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a>. I received my Ph.D. degree from the College of Mechanical and Electronic Engineering at Northwest A&F University in 2025. From 2023 to 2024, I was a joint Ph.D. student at <a href="https://www.mcgill.ca/" target="_blank">McGill University</a>, Canada, funded by the China Scholarship Council (CSC). My main research interests are to develop and adopt innovative sensing technologies and AI-driven computational methodologies for solving challenges in next-generation smart agriculture, specifically focusing on orchard harvesting robots.
             </div>
-
             <h2>Specifically, my research interests include:</h2>
             <ul class="interest-list">
                 <li>Orchard harvesting robots and catch-and-shake strategies.</li>
