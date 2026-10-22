@@ -40,6 +40,52 @@
         .interest-list li { margin-bottom: 15px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
         .interest-list li::before { content: "▶"; position: absolute; left: 0; top: 2px; color: #888; font-size: 0.8em; }
 
+        /* ====== 新增：横向滑动相册 ====== */
+        .photo-gallery {
+            margin-bottom: 50px;
+        }
+        
+        .photo-scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 10px; /* 给滚动条留出空间 */
+            scroll-behavior: smooth;
+        }
+
+        /* 自定义滚动条样式，让它看起来更精致 */
+        .photo-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .photo-scroll-container::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+        .photo-scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .photo-scroll-item {
+            flex: 0 0 auto;
+            height: 220px; /* 固定高度，宽度自适应 */
+            border-radius: 4px;
+            object-fit: cover; /* 保证图片不变形 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 底部滑动提示文字 */
+        .scroll-hint {
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        /* ================================== */
+
         /* Recruiting 板块样式 */
         .recruit-section { border-top: 1px solid #eaeaea; padding-top: 30px; }
         .recruit-title { font-size: 1.8em; font-weight: 700; color: #222; border-left: 6px solid #e5231b; padding-left: 12px; margin-bottom: 25px; line-height: 1.2; }
@@ -51,9 +97,8 @@
         .scholarship-links a { color: #1a73e8; }
         .scholarship-links span.separator { color: #999; margin: 0 8px; }
 
-        /* 移动端适配 (修复导航栏隐藏问题) */
+        /* 移动端适配 */
         @media (max-width: 900px) {
-            /* 导航栏变为上下结构，居中显示菜单 */
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
             nav a { font-size: 0.95em; }
@@ -63,6 +108,9 @@
             .content h1 { font-size: 2em; }
             .scholarship-row { flex-direction: column; gap: 5px; }
             .scholarship-degree { flex: none; }
+            
+            /* 手机端图片高度稍微调小一点 */
+            .photo-scroll-item { height: 160px; }
         }
     </style>
 </head>
@@ -108,6 +156,23 @@
                 <li>Vibration harvesting mechanism and equipment optimization for oil tea.</li>
                 <li>Agricultural robotics and automation.</li>
             </ul>
+
+            <!-- ====== 新增：横向图片滑动区 ====== -->
+            <div class="photo-gallery">
+                <div class="photo-scroll-container">
+                    <!-- 这里目前是灰色占位图，之后你上传了真实图片，把 src 里的网址改成文件名即可，比如 src="fig1.jpg" -->
+                    <img src="https://via.placeholder.com/300x220/cccccc/999999?text=Research+Photo+1" alt="Research 1" class="photo-scroll-item">
+                    <img src="https://via.placeholder.com/400x220/cccccc/999999?text=Research+Photo+2" alt="Research 2" class="photo-scroll-item">
+                    <img src="https://via.placeholder.com/350x220/cccccc/999999?text=Research+Photo+3" alt="Research 3" class="photo-scroll-item">
+                    <img src="https://via.placeholder.com/300x220/cccccc/999999?text=Research+Photo+4" alt="Research 4" class="photo-scroll-item">
+                    <img src="https://via.placeholder.com/400x220/cccccc/999999?text=Research+Photo+5" alt="Research 5" class="photo-scroll-item">
+                </div>
+                <!-- 滚动提示 -->
+                <div class="scroll-hint">
+                    <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to see more
+                </div>
+            </div>
+            <!-- ================================== -->
 
             <div class="recruit-section">
                 <h2 class="recruit-title">Recruiting</h2>
