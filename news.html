@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | 郑洲洲课题组</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f8f9fa; /* 浅灰色背景 */
+        }
+        a { color: #1a73e8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* 顶部导航栏 */
+        header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: #c8232c; }
+        nav ul { list-style: none; display: flex; gap: 35px; }
+        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
+
+        /* 主容器 */
+        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+
+        /* 页面大标题带红条 */
+        .page-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #222;
+            border-left: 8px solid #e5231b;
+            padding-left: 15px;
+            margin-bottom: 50px;
+            line-height: 1.2;
+        }
+
+        /* 新闻列表 */
+        .news-list { display: flex; flex-direction: column; gap: 40px; }
+
+        /* 单条新闻的时间 */
+        .news-date {
+            font-size: 1.3em;
+            color: #777;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #e5231b; /* 红色下划线 */
+        }
+
+        /* 新闻卡片 */
+        .news-card {
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* 淡阴影 */
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .page-title { font-size: 36px; }
+            .news-date { font-size: 1.1em; }
+            .news-card { padding: 15px; font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-university" style="color: #c8232c;"></i> Zheng <span>Lab</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <h1 class="page-title">News</h1>
+
+        <div class="news-list">
+            
+            <!-- 新闻 1: 2026-01 项目获批 -->
+            <div class="news-item">
+                <div class="news-date">2026-01</div>
+                <div class="news-card">
+                    郑洲洲老师主持的“湖南省自然科学基金青年基金项目（2026JJ60165）：振枝式油茶枝条能量传递特性与花果脱落机理研究”以及“岳麓山实验室联合引进人才项目（2025RC2065）”正式获批立项，项目周期分别至 2028 年和 2027 年。
+                </div>
+            </div>
+
+            <!-- 新闻 2: 2025-11 项目获批 -->
+            <div class="news-item">
+                <div class="news-date">2025-11</div>
+                <div class="news-card">
+                    郑洲洲老师主持的“湖南省教育厅优秀青年项目（25B0268）：基于杆-枝-花-果-叶互作的油茶花果运移与脱落机制研究”成功获批立项。
+                </div>
+            </div>
+
+            <!-- 新闻 3: 2025-06 获奖 -->
+            <div class="news-item">
+                <div class="news-date">2025-06</div>
+                <div class="news-card">
+                    郑洲洲老师的博士学位论文荣获西北农林科技大学“校优秀博士学位论文”。
+                </div>
+            </div>
+
+            <!-- 新闻 4: 2024-12 联培经历 -->
+            <div class="news-item">
+                <div class="news-date">2024-12</div>
+                <div class="news-card">
+                    郑洲洲老师圆满完成国家建设高水平大学公派研究生项目，结束在加拿大麦吉尔大学（McGill University）生物资源工程系为期一年的博士联合培养，按期回国。
+                </div>
+            </div>
+
+            <!-- 新闻 5: 2024-06 论文高被引 -->
+            <div class="news-item">
+                <div class="news-date">2024-06</div>
+                <div class="news-card">
+                    课题组论文《AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting》入选 ESI 高被引论文。该研究在冬枣振动采收关键区域视觉感知方面取得重要进展。
+                </div>
+            </div>
+
+            <!-- 新闻 6: 2022-01 参与国家项目 -->
+            <div class="news-item">
+                <div class="news-date">2022-01</div>
+                <div class="news-card">
+                    课题组参与的国家重点研发计划课题“枣和香榧优质高产新品种创制与精准栽培技术（2022YFD2200404）”正式启动，项目周期为 2022 年至 2027 年。
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
