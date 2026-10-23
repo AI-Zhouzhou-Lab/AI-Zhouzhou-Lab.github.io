@@ -40,37 +40,30 @@
         .interest-list li { margin-bottom: 15px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
         .interest-list li::before { content: "▶"; position: absolute; left: 0; top: 2px; color: #888; font-size: 0.8em; }
 
-        /* ====== 新增：横向滑动相册 ====== */
-        .photo-gallery {
-            margin-bottom: 50px;
-        }
+        /* ====== 横向滑动相册（视频+图片） ====== */
+        .photo-gallery { margin-bottom: 50px; }
         
         .photo-scroll-container {
             display: flex;
             overflow-x: auto;
             gap: 15px;
-            padding-bottom: 10px; /* 给滚动条留出空间 */
+            padding-bottom: 10px;
             scroll-behavior: smooth;
         }
 
-        /* 自定义滚动条样式，让它看起来更精致 */
-        .photo-scroll-container::-webkit-scrollbar {
-            height: 8px;
-        }
-        .photo-scroll-container::-webkit-scrollbar-thumb {
-            background: #ccc;
-            border-radius: 4px;
-        }
-        .photo-scroll-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
+        /* 滚动条样式 */
+        .photo-scroll-container::-webkit-scrollbar { height: 8px; }
+        .photo-scroll-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+        .photo-scroll-container::-webkit-scrollbar-track { background: #f1f1f1; }
 
+        /* 统一控制图片和视频的尺寸 */
         .photo-scroll-item {
             flex: 0 0 auto;
-            height: 220px; /* 固定高度，宽度自适应 */
+            height: 220px; 
             border-radius: 4px;
-            object-fit: cover; /* 保证图片不变形 */
+            object-fit: cover; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #000; /* 视频底色设为黑色，显得更高级 */
         }
 
         /* 底部滑动提示文字 */
@@ -84,7 +77,6 @@
             justify-content: center;
             gap: 8px;
         }
-        /* ================================== */
 
         /* Recruiting 板块样式 */
         .recruit-section { border-top: 1px solid #eaeaea; padding-top: 30px; }
@@ -109,7 +101,7 @@
             .scholarship-row { flex-direction: column; gap: 5px; }
             .scholarship-degree { flex: none; }
             
-            /* 手机端图片高度稍微调小一点 */
+            /* 手机端尺寸稍微调小一点 */
             .photo-scroll-item { height: 160px; }
         }
     </style>
@@ -157,15 +149,20 @@
                 <li>Agricultural robotics and automation.</li>
             </ul>
 
-            <!-- ====== 新增：横向图片滑动区 ====== -->
+            <!-- ====== 视频与图片滑动区 ====== -->
             <div class="photo-gallery">
                 <div class="photo-scroll-container">
-                    <!-- 这里目前是灰色占位图，之后你上传了真实图片，把 src 里的网址改成文件名即可，比如 src="fig1.jpg" -->
+                    
+                    <!-- 第一个视频：自动静音播放，循环，带控制条 -->
+                    <video src="lab_video1.mp4" class="photo-scroll-item" controls muted playsinline autoplay loop></video>
+                    
+                    <!-- 第二个视频：带控制条，不自动播放 -->
+                    <video src="lab_video2.mp4" class="photo-scroll-item" controls muted playsinline></video>
+                    
+                    <!-- 如果以后还有灰色图片占位，可以保留这两行。不需要的话直接删掉 -->
                     <img src="https://via.placeholder.com/300x220/cccccc/999999?text=Research+Photo+1" alt="Research 1" class="photo-scroll-item">
-                    <img src="https://via.placeholder.com/400x220/cccccc/999999?text=Research+Photo+2" alt="Research 2" class="photo-scroll-item">
-                    <img src="https://via.placeholder.com/350x220/cccccc/999999?text=Research+Photo+3" alt="Research 3" class="photo-scroll-item">
-                    <img src="https://via.placeholder.com/300x220/cccccc/999999?text=Research+Photo+4" alt="Research 4" class="photo-scroll-item">
-                    <img src="https://via.placeholder.com/400x220/cccccc/999999?text=Research+Photo+5" alt="Research 5" class="photo-scroll-item">
+                    <img src="https://via.placeholder.com/350x220/cccccc/999999?text=Research+Photo+2" alt="Research 2" class="photo-scroll-item">
+
                 </div>
                 <!-- 滚动提示 -->
                 <div class="scroll-hint">
