@@ -25,9 +25,10 @@
         /* 页面大标题带红条 */
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
 
+        /* 成员分类板块 */
         .team-section { margin-bottom: 60px; }
         
-        /* 分类标题 */
+        /* 分类标题（图标 + 标题 + 红色底边） */
         .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
         .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
         .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
@@ -61,7 +62,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html">News</a></li>
-                    <!-- 当前是 team.html 页面，所以这里加 active -->
                     <li><a href="team.html" class="active">Team</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="joinus.html">Join Us</a></li>
@@ -73,7 +73,7 @@
     <div class="main-container">
         <h1 class="page-title">Team</h1>
 
-        <!-- 教师团队 -->
+        <!-- ================= 教师团队 ================= -->
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-graduation-cap"></i>
@@ -87,34 +87,98 @@
                     <div class="member-desc">
                         Zhouzhou Zheng is a Lecturer and Master's Supervisor at the College of Mechanical and Electrical Engineering, Hunan Agricultural University. He received his Ph.D. in Agricultural Mechanization Engineering from Northwest A&F University in June 2025. From 2023 to 2024, he was a joint Ph.D. student at McGill University in Canada, funded by the China Scholarship Council (CSC).
                         <br><br>
-                        His research focuses on orchard harvesting robots, orchard information perception technology, and fruit tree phenotyping. He has published over 10 SCI papers as the first author in top journals such as <em>Computers and Electronics in Agriculture</em> and <em>Expert Systems with Applications</em>, including 6 papers in JCR Q1 with a cumulative impact factor of 87.1. He serves as a youth editorial board member for <em>Plant Phenomics</em> and a guest editor for <em>Agronomy</em> and <em>Sustainability</em>.
+                        His research focuses on orchard harvesting robots, orchard information perception technology, and fruit tree phenotyping. He has published over 10 SCI papers as the first author in top journals such as <em>Computers and Electronics in Agriculture</em> and <em>Expert Systems with Applications</em>, including 6 papers in JCR Q1 with a cumulative impact factor of 87.1.
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 研究生团队 -->
+        <!-- ================= 硕士研究生 ================= -->
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-user-graduate"></i>
-                <h2>Graduate</h2>
+                <h2>Master's</h2>
                 <span>students</span>
             </div>
+            
+            <!-- 学生 1 -->
             <div class="member-item">
-                <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student A" class="member-photo">
+                <img src="Fujiahui.jpg" alt="Jiahui Fu" class="member-photo">
                 <div class="member-info">
-                    <h3 class="member-name">Student A (学生 A)</h3>
-                    <div class="member-desc">Introduction to be added.<br><br>Research interests: Deep learning-based fruit recognition and localization.</div>
+                    <h3 class="member-name">Jiahui Fu</h3>
+                    <div class="member-desc">
+                        Introduction to be added.
+                    </div>
                 </div>
             </div>
+
+            <!-- 学生 2 -->
             <div class="member-item">
-                <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Student B" class="member-photo">
+                <img src="Tianwenbiao.jpg" alt="Wenbiao Tian" class="member-photo">
                 <div class="member-info">
-                    <h3 class="member-name">Student B (学生 B)</h3>
-                    <div class="member-desc">Introduction to be added.<br><br>Research interests: Navigation and path planning for harvesting robots.</div>
+                    <h3 class="member-name">Wenbiao Tian</h3>
+                    <div class="member-desc">
+                        Introduction to be added.
+                    </div>
                 </div>
             </div>
+
+            <!-- 学生 3 -->
+            <div class="member-item">
+                <img src="Zhoujunjie.jpg" alt="Junjie Zhou" class="member-photo">
+                <div class="member-info">
+                    <h3 class="member-name">Junjie Zhou</h3>
+                    <div class="member-desc">
+                        Introduction to be added.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学生 4 -->
+            <div class="member-item">
+                <img src="Zhenbin.jpg" alt="Bin Zhen" class="member-photo">
+                <div class="member-info">
+                    <h3 class="member-name">Bin Zhen</h3>
+                    <div class="member-desc">
+                        Introduction to be added.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学生 5 -->
+            <div class="member-item">
+                <img src="Wuyujie.jpg" alt="Yujie Wu" class="member-photo">
+                <div class="member-info">
+                    <h3 class="member-name">Yujie Wu</h3>
+                    <div class="member-desc">
+                        Introduction to be added.
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- ================= 本科生 ================= -->
+        <div class="team-section">
+            <div class="section-header">
+                <i class="fas fa-book-open-reader"></i>
+                <h2>Undergraduate</h2>
+                <span>students</span>
+            </div>
+            
+            <!-- 示例：本科生 A -->
+            <div class="member-item">
+                <img src="https://via.placeholder.com/300x375?text=No+Photo" alt="Undergrad A" class="member-photo">
+                <div class="member-info">
+                    <h3 class="member-name">Student C</h3>
+                    <div class="member-desc">
+                        Introduction to be added.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </body>
 </html>
