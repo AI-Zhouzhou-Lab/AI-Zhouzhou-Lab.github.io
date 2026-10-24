@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader | Zhouzhou Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; text-decoration: none; }
+        nav a:hover, nav a.active { color: #c8232c; }
 
+        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+        .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
+        
+        .team-section { margin-bottom: 60px; }
+        .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
+        .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
+        .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
+        
+        .member-item { display: flex; gap: 30px; margin-bottom: 50px; }
+        .member-photo { flex: 0 0 200px; height: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .member-info { flex: 1; }
+        .member-name { font-size: 1.8em; font-weight: 400; color: #555; margin-bottom: 15px; }
+        .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
+
+        @media (max-width: 900px) {
+            .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .member-item { flex-direction: column; gap: 20px; align-items: center; }
+            .member-photo { width: 200px; }
+            .member-info { text-align: center; }
+            .member-desc { text-align: left; }
+            .page-title { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zhouzhou Lab</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="leader.html" class="active">Leader</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="joinus.html">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <h1 class="page-title">Leader</h1>
+
+        <div class="team-section">
+            <div class="member-item">
+                <!-- 照片可以用真实文件替换，如 fulongsheng.jpg -->
+                <img src="https://via.placeholder.com/300x375?text=Prof.+Longsheng+Fu" alt="Prof. Longsheng Fu" class="member-photo">
+                <div class="member-info">
+                    <h3 class="member-name">Prof. Longsheng Fu</h3>
+                    <div class="member-desc">
+                        Introduction to be added. (这里填写傅隆生教授的简介)
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-item">
+                <!-- 照片可以用真实文件替换，如 wumingliang.jpg -->
+                <img src="https://via.placeholder.com/300x375?text=Prof.+Mingliang+Wu" alt="Prof. Mingliang Wu" class="member-photo">
+                <div class="member-info">
+                    <h3 class="member-name">Prof. Mingliang Wu (Dean)</h3>
+                    <div class="member-desc">
+                        Introduction to be added. (这里填写吴明亮院长的简介)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
