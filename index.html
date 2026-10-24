@@ -43,41 +43,12 @@
 
         /* ====== 横向滑动相册（视频+图片） ====== */
         .photo-gallery { margin-bottom: 50px; }
-        
-        .photo-scroll-container {
-            display: flex;
-            overflow-x: auto;
-            gap: 15px;
-            padding-bottom: 10px;
-            scroll-behavior: smooth;
-        }
-
-        /* 滚动条样式 */
+        .photo-scroll-container { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px; scroll-behavior: smooth; }
         .photo-scroll-container::-webkit-scrollbar { height: 8px; }
         .photo-scroll-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
         .photo-scroll-container::-webkit-scrollbar-track { background: #f1f1f1; }
-
-        /* 统一控制图片和视频的尺寸 */
-        .photo-scroll-item {
-            flex: 0 0 auto;
-            height: 220px; 
-            border-radius: 4px;
-            object-fit: cover; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            background-color: #000; /* 视频底色设为黑色，显得更高级 */
-        }
-
-        /* 底部滑动提示文字 */
-        .scroll-hint {
-            text-align: center;
-            color: #888;
-            font-size: 0.9em;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
+        .photo-scroll-item { flex: 0 0 auto; height: 220px; border-radius: 4px; object-fit: cover; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background-color: #000; }
+        .scroll-hint { text-align: center; color: #888; font-size: 0.9em; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; }
 
         /* Recruiting 板块样式 */
         .recruit-section { border-top: 1px solid #eaeaea; padding-top: 30px; }
@@ -95,14 +66,11 @@
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
             nav a { font-size: 0.95em; }
-            
             .main-container { flex-direction: column; gap: 40px; margin-top: 20px; }
             .sidebar { flex: auto; position: static; width: 100%; max-width: 300px; margin: 0 auto; }
             .content h1 { font-size: 2em; }
             .scholarship-row { flex-direction: column; gap: 5px; }
             .scholarship-degree { flex: none; }
-            
-            /* 手机端尺寸稍微调小一点 */
             .photo-scroll-item { height: 160px; }
         }
     </style>
@@ -127,24 +95,12 @@
         <aside class="sidebar">
             <img src="zheng.jpg" alt="Zhouzhou Zheng" class="profile-img">
             
-            <!-- 侧边栏：已替换为真实链接 -->
+            <!-- 侧边栏：已加入真实链接 -->
             <ul class="sidebar-info">
-                <li>
-                    <span class="icon"><i class="fa-brands fa-google"></i></span> 
-                    <a href="https://scholar.google.com/citations?user=hQRJr38AAAAJ&hl=en" target="_blank">Google Scholar</a>
-                </li>
-                <li>
-                    <span class="icon"><i class="fa-brands fa-orcid"></i></span> 
-                    <a href="https://orcid.org/0000-0002-0822-1436" target="_blank">ORCID</a>
-                </li>
-                <li>
-                    <span class="icon"><i class="fa-solid fa-envelope"></i></span> 
-                    <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a>
-                </li>
-                <li>
-                    <span class="icon"><i class="fa-solid fa-location-dot"></i></span> 
-                    College of Mechanical and Electrical Engineering, Hunan Agricultural University, Changsha, China
-                </li>
+                <li><span class="icon"><i class="fa-brands fa-google"></i></span> <a href="https://scholar.google.com/citations?user=hQRJr38AAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                <li><span class="icon"><i class="fa-brands fa-orcid"></i></span> <a href="https://orcid.org/0000-0002-0822-1436" target="_blank">ORCID</a></li>
+                <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a></li>
+                <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> College of Mechanical and Electrical Engineering, Hunan Agricultural University, Changsha, China</li>
             </ul>
         </aside>
 
@@ -169,16 +125,9 @@
             <div class="photo-gallery">
                 <div class="photo-scroll-container">
                     
-                    <!-- 第一个视频：自动静音播放，循环，带控制条 -->
                     <video src="lab_video1.mp4" class="photo-scroll-item" controls muted playsinline autoplay loop></video>
-                    
-                    <!-- 第二个视频：带控制条，不自动播放 -->
                     <video src="lab_video2.mp4" class="photo-scroll-item" controls muted playsinline></video>
-                   
-                    <!-- 第三个视频：带控制条，不自动播放 -->
                     <video src="lab_video3.mp4" class="photo-scroll-item" controls muted playsinline></video>
-                    
-                    <!-- 第四个视频：带控制条，不自动播放 -->
                     <video src="lab_video4.mp4" class="photo-scroll-item" controls muted playsinline></video>
 
                 </div>
@@ -187,7 +136,6 @@
                     <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to see more
                 </div>
             </div>
-            <!-- ================================== -->
 
             <div class="recruit-section">
                 <h2 class="recruit-title">Recruiting</h2>
