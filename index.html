@@ -41,7 +41,7 @@
         .interest-list li { margin-bottom: 15px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
         .interest-list li::before { content: "▶"; position: absolute; left: 0; top: 2px; color: #888; font-size: 0.8em; }
 
-        /* ====== 横向滑动相册（视频+图片） ====== */
+        /* ====== 横向滑动相册 ====== */
         .photo-gallery { margin-bottom: 50px; }
         .photo-scroll-container { display: flex; overflow-x: auto; gap: 15px; padding-bottom: 10px; scroll-behavior: smooth; }
         .photo-scroll-container::-webkit-scrollbar { height: 8px; }
@@ -55,11 +55,12 @@
         .recruit-title { font-size: 1.8em; font-weight: 700; color: #222; border-left: 6px solid #e5231b; padding-left: 12px; margin-bottom: 25px; line-height: 1.2; }
         .recruit-subtitle { font-size: 1.1em; font-weight: 700; color: #222; margin-bottom: 15px; }
         .recruit-text { font-size: 1.05em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: justify; }
-        .scholarship-title { font-size: 1.05em; color: #777; margin-bottom: 15px; margin-top: 20px; }
+        
+        /* 保留奖学金模板的样式用于排版导师信息 */
+        .scholarship-title { font-size: 1.05em; color: #777; margin-bottom: 15px; margin-top: 20px; font-weight: 600;}
         .scholarship-row { display: flex; align-items: flex-start; margin-bottom: 15px; font-size: 1.05em; line-height: 1.6; }
-        .scholarship-degree { flex: 0 0 130px; font-weight: 600; color: #333; }
-        .scholarship-links a { color: #1a73e8; }
-        .scholarship-links span.separator { color: #999; margin: 0 8px; }
+        .scholarship-degree { flex: 0 0 160px; font-weight: 600; color: #333; }
+        .scholarship-links { color: #444; }
 
         /* 移动端适配 */
         @media (max-width: 900px) {
@@ -95,7 +96,6 @@
         <aside class="sidebar">
             <img src="zheng.jpg" alt="Zhouzhou Zheng" class="profile-img">
             
-            <!-- 侧边栏：已加入真实链接 -->
             <ul class="sidebar-info">
                 <li><span class="icon"><i class="fa-brands fa-google"></i></span> <a href="https://scholar.google.com/citations?user=hQRJr38AAAAJ&hl=en" target="_blank">Google Scholar</a></li>
                 <li><span class="icon"><i class="fa-brands fa-orcid"></i></span> <a href="https://orcid.org/0000-0002-0822-1436" target="_blank">ORCID</a></li>
@@ -121,52 +121,43 @@
                 <li>Agricultural robotics and automation.</li>
             </ul>
 
-            <!-- ====== 视频与图片滑动区 ====== -->
+            <!-- 横向滑动相册区 -->
             <div class="photo-gallery">
                 <div class="photo-scroll-container">
-                    
                     <video src="lab_video1.mp4" class="photo-scroll-item" controls muted playsinline autoplay loop></video>
                     <video src="lab_video2.mp4" class="photo-scroll-item" controls muted playsinline></video>
                     <video src="lab_video3.mp4" class="photo-scroll-item" controls muted playsinline></video>
                     <video src="lab_video4.mp4" class="photo-scroll-item" controls muted playsinline></video>
-
                 </div>
-                <!-- 滚动提示 -->
                 <div class="scroll-hint">
                     <i class="fas fa-arrows-alt-h"></i> Scroll horizontally to see more
                 </div>
             </div>
 
+            <!-- Recruiting 板块 -->
             <div class="recruit-section">
                 <h2 class="recruit-title">Recruiting</h2>
                 <p class="recruit-subtitle">For Prospective Students / Postdocs</p>
                 <p class="recruit-text">
                     I am actively looking for strong and motivated students in the areas of deep learning, computer vision, agricultural robotics, and digital agriculture. Also, we welcome CSC-supported visiting students and professors. If you are interested in my research, please send me an <a href="mailto:zhengzz@hunau.edu.cn">email</a> with the subject of "Prospective PhD/Master student [Your name]", or apply through the <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a> system and mention me in your application. Due to the large volume of emails, I apologize for not replying to individual inquiries I have received.
                 </p>
-                <p class="scholarship-title">Scholarship opportunities :</p>
+                
+                <!-- 替换后的导师信息部分 -->
+                <p class="scholarship-title">Supervisor Information :</p>
+                
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>PhD</strong> :</div>
-                    <div class="scholarship-links">
-                        <a href="#">CSC Scholarship</a> <span class="separator">/</span> 
-                        <a href="#">National Natural Science Foundation</a> <span class="separator">/</span> 
-                        <a href="#">Hunan Provincial Natural Science Foundation</a> <span class="separator">/</span> 
-                        <a href="#">HUNAU Presidential Scholarship</a>
-                    </div>
+                    <div class="scholarship-links">Prof. Longsheng Fu</div>
                 </div>
+                
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>Master</strong> :</div>
-                    <div class="scholarship-links">
-                        <a href="#">National Scholarship</a> <span class="separator">/</span> 
-                        <a href="#">Academic Scholarship of HUNAU</a> <span class="separator">/</span> 
-                        <a href="#">Hunan Provincial Innovation Foundation</a>
-                    </div>
+                    <div class="scholarship-links">Dr. Zhouzhou Zheng</div>
                 </div>
+                
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>Undergraduate</strong> :</div>
-                    <div class="scholarship-links">
-                        <a href="#">National University Student Innovation Program</a> <span class="separator">/</span> 
-                        <a href="#">HUNAU SURE (Student Undergraduate Research Experience)</a>
-                    </div>
+                    <div class="scholarship-links">Dr. Zhouzhou Zheng</div>
                 </div>
             </div>
         </main>
