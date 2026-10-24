@@ -23,6 +23,7 @@
         .main-container { max-width: 1100px; margin: 40px auto; padding: 0 30px; display: flex; gap: 60px; align-items: flex-start; }
         .sidebar { flex: 0 0 280px; position: sticky; top: 100px; }
         .profile-img { width: 100%; border: 1px solid #eaeaea; padding: 5px; background-color: #fff; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 25px; display: block; object-fit: cover; aspect-ratio: 3/4; }
+        
         .sidebar-info { list-style: none; margin-top: 20px; }
         .sidebar-info li { margin-bottom: 15px; font-size: 1em; color: #555; display: flex; align-items: flex-start; line-height: 1.4; }
         .sidebar-info .icon { width: 25px; margin-right: 10px; font-size: 1.2em; color: #222; text-align: center; }
@@ -125,10 +126,25 @@
     <div class="main-container">
         <aside class="sidebar">
             <img src="zheng.jpg" alt="Zhouzhou Zheng" class="profile-img">
+            
+            <!-- 侧边栏：已替换为真实链接 -->
             <ul class="sidebar-info">
-                <li><span class="icon"><i class="fa-brands fa-google"></i></span> <a href="#">Google Scholar</a></li>
-                <li><span class="icon"><i class="fa-solid fa-envelope"></i></span> <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a></li>
-                <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span> College of Mechanical and Electrical Engineering, Hunan Agricultural University, Changsha, China</li>
+                <li>
+                    <span class="icon"><i class="fa-brands fa-google"></i></span> 
+                    <a href="https://scholar.google.com/citations?user=hQRJr38AAAAJ&hl=en" target="_blank">Google Scholar</a>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa-brands fa-orcid"></i></span> 
+                    <a href="https://orcid.org/0000-0002-0822-1436" target="_blank">ORCID</a>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span> 
+                    <a href="mailto:zhengzz@hunau.edu.cn">zhengzz@hunau.edu.cn</a>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa-solid fa-location-dot"></i></span> 
+                    College of Mechanical and Electrical Engineering, Hunan Agricultural University, Changsha, China
+                </li>
             </ul>
         </aside>
 
@@ -164,7 +180,6 @@
                     
                     <!-- 第四个视频：带控制条，不自动播放 -->
                     <video src="lab_video4.mp4" class="photo-scroll-item" controls muted playsinline></video>
-                   
 
                 </div>
                 <!-- 滚动提示 -->
