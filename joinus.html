@@ -11,12 +11,12 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* 顶部导航栏 */
+        /* 导航栏 */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
         /* 主容器 */
@@ -41,7 +41,6 @@
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            nav a { font-size: 0.95em; }
             .page-title { font-size: 36px; }
             .join-container { flex-direction: column; gap: 40px; }
             .join-photo-wrapper { flex: auto; width: 100%; }
@@ -58,8 +57,11 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="team.html">Team</a></li>
+                    <li><a href="leader.html">Leader</a></li>
                     <li><a href="publications.html">Publications</a></li>
-                    <!-- 当前是 joinus.html 页面，所以这里加 active -->
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                     <li><a href="joinus.html" class="active">Join Us</a></li>
                 </ul>
             </nav>
