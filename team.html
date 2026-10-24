@@ -11,41 +11,29 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* 顶部导航栏 */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        /* 主容器 */
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
-
-        /* 页面大标题带红条 */
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
-
-        /* 成员分类板块 */
         .team-section { margin-bottom: 60px; }
-        
-        /* 分类标题（图标 + 标题 + 红色底边） */
         .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
         .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
         .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
         .section-header span { font-size: 1.2em; color: #777; }
-
-        /* 成员卡片：左图右文 */
         .member-item { display: flex; gap: 30px; margin-bottom: 50px; }
         .member-photo { flex: 0 0 200px; height: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .member-info { flex: 1; }
         .member-name { font-size: 1.8em; font-weight: 400; color: #555; margin-bottom: 15px; }
         .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
 
-        /* 移动端适配 */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            nav a { font-size: 0.95em; }
             .member-item { flex-direction: column; gap: 20px; align-items: center; }
             .member-photo { width: 200px; }
             .member-info { text-align: center; }
@@ -63,7 +51,11 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="leader.html">Leader</a></li>
                     <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                     <li><a href="joinus.html">Join Us</a></li>
                 </ul>
             </nav>
@@ -105,13 +97,13 @@
                 <div class="member-info">
                     <h3 class="member-name">Jiahui Fu</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Jiahui Fu received her Master's degree in Agricultural Engineering and Information Technology. Her research focuses on oil tea fruit vibration harvesting robots. She is dedicated to using computer technology to solve the problems encountered during the harvesting process of oil tea fruit picking robots.
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ================= 硕士研究生 (按指定顺序) ================= -->
+        <!-- ================= 硕士研究生 ================= -->
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-user-friends"></i>
@@ -125,7 +117,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Bin Zheng</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Bin Zheng holds a Bachelor's degree in Computer Science from Hunan Agricultural University. His current research focuses on using computer vision and deep learning technologies for intelligent plant identification, counting, and yield estimation, serving smart agriculture. He has published a related paper in <em>Smart Agricultural Technology</em>.
                     </div>
                 </div>
             </div>
@@ -136,7 +128,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Biao Chen</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Biao Chen is currently pursuing a Master's degree in Agricultural Engineering and Information Technology (Agricultural Machinery and Intelligent Equipment) at the College of Mechanical and Electrical Engineering, Hunan Agricultural University. His research focuses on the vibration abscission mechanism of oil tea fruits and flower buds, particularly studying handheld oil tea fruit vibration harvesting devices.
                     </div>
                 </div>
             </div>
@@ -147,7 +139,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Yujie Wu</h3>
                     <div class="member-desc">
-                       Introduction to be added.
+                        Yujie Wu received his Bachelor's degree in Mechatronic Engineering from Shangqiu Institute of Technology. He is currently a Master's student in Mechanical Engineering at Hunan Agricultural University. His current research direction is agricultural computer vision, focusing on monitoring the growth cycle of rapeseed in complex field environments based on image enhancement and segmentation techniques. He is dedicated to integrating his mechatronics engineering background with deep learning algorithms to overcome complex field illumination and occlusion interference, achieving accurate perception and analysis of rapeseed growth status.
                     </div>
                 </div>
             </div>
@@ -158,7 +150,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Wenbiao Tian</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Wenbiao Tian studied Agricultural Mechanization and Automation at Hunan Agricultural University for his Bachelor's degree and is currently pursuing a Master's degree there. He specializes in the integrated construction of embedded software and hardware (or applications), capable of integrating agricultural mechanization engineering backgrounds with deep learning algorithms. He is proficient in system development from visual recognition and parameter perception to embedded execution endpoints, dedicated to improving the intelligence level and operational efficiency of agricultural equipment.
                     </div>
                 </div>
             </div>
@@ -169,7 +161,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Junjie Zhou</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Junjie Zhou received his Bachelor's degree in Agricultural Mechanization and Automation from Hunan Agricultural University. He is currently a Master's student in Mechanical Engineering at the same university. He mainly engages in the research of rapeseed/camellia fruit vibration harvesting equipment, specializes in mechanical structure and principle design, and is committed to solving the challenges of mechanized harvesting of oil tea fruits through mechanical vibration solutions.
                     </div>
                 </div>
             </div>
@@ -180,14 +172,14 @@
                 <div class="member-info">
                     <h3 class="member-name">Junyu Liu</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Junyu Liu received his Bachelor's degree in Network Engineering from Xizang Minzu University and is currently a Master's student in Mechanical Engineering at Hunan Agricultural University. He currently focuses on the research and development of agricultural robotic arm recognition and harvesting robots. He specializes in visual perception and robotic arm control, capable of building a vision-robotic arm collaboration system based on ROS2 to complete target recognition and positioning, hand-eye calibration, grasping pose estimation, and motion control. He also has experience in STM32 microcontroller development, peripheral driver, and actuator control, capable of integrating the system from visual recognition, control algorithms to embedded execution endpoints, dedicated to improving the recognition accuracy and operational efficiency of agricultural harvesting robots.
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- ================= 本科生 (按指定顺序) ================= -->
+        <!-- ================= 本科生 ================= -->
         <div class="team-section">
             <div class="section-header">
                 <i class="fas fa-book-open-reader"></i>
@@ -201,7 +193,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Jiachen Li</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Jiachen Li is an undergraduate student majoring in Agricultural Mechanization and Automation at Hunan Agricultural University. He has previously participated in and researched projects such as point cloud visual neural networks and the design of handheld oil tea vibration harvesters. He won the First Prize in the provincial competition and the Third Prize in the national competition in the energy conservation and emission reduction competition.
                     </div>
                 </div>
             </div>
@@ -212,7 +204,7 @@
                 <div class="member-info">
                     <h3 class="member-name">Jing Hu</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Jing Hu is an undergraduate student at Hunan Agricultural University. Her research direction is the identification of oil tea leaf diseases and pests based on semantic segmentation. Currently, she is participating in undergraduate research competitions with teachers in the research group, accumulating experience in model training and deployment through project practice.
                     </div>
                 </div>
             </div>
@@ -223,13 +215,12 @@
                 <div class="member-info">
                     <h3 class="member-name">Fang Zhang</h3>
                     <div class="member-desc">
-                        Introduction to be added.
+                        Fang Zhang studied Vehicle Engineering at Hunan Agricultural University for her Bachelor's degree and was recommended for admission to Nanjing Agricultural University for her Master's studies in Mechanical Manufacturing and Automation. Her main research direction is machine vision, possessing multiple structural design project experiences, and exploring the application of machine vision in agricultural engineering.
                     </div>
                 </div>
             </div>
 
         </div>
-
     </div>
 </body>
 </html>
