@@ -11,6 +11,7 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
+        /* 导航栏 (适配更多按钮) */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
@@ -18,19 +19,29 @@
         nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
+        /* 主容器 */
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+
+        /* 页面大标题带红条 */
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
+
+        /* 成员分类板块 */
         .team-section { margin-bottom: 60px; }
+        
+        /* 分类标题（图标 + 标题 + 红色底边） */
         .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
         .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
         .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
         .section-header span { font-size: 1.2em; color: #777; }
+
+        /* 成员卡片：左图右文 */
         .member-item { display: flex; gap: 30px; margin-bottom: 50px; }
         .member-photo { flex: 0 0 200px; height: 250px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .member-info { flex: 1; }
         .member-name { font-size: 1.8em; font-weight: 400; color: #555; margin-bottom: 15px; }
         .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
 
+        /* 移动端适配 */
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
@@ -133,13 +144,13 @@
                 </div>
             </div>
 
-            <!-- 3. Wuyujie -->
+            <!-- 3. Wuyujie (已修改为女性代词) -->
             <div class="member-item">
                 <img src="Wuyujie.jpg" alt="Yujie Wu" class="member-photo">
                 <div class="member-info">
                     <h3 class="member-name">Yujie Wu</h3>
                     <div class="member-desc">
-                        Yujie Wu received his Bachelor's degree in Mechatronic Engineering from Shangqiu Institute of Technology. He is currently a Master's student in Mechanical Engineering at Hunan Agricultural University. His current research direction is agricultural computer vision, focusing on monitoring the growth cycle of rapeseed in complex field environments based on image enhancement and segmentation techniques. He is dedicated to integrating his mechatronics engineering background with deep learning algorithms to overcome complex field illumination and occlusion interference, achieving accurate perception and analysis of rapeseed growth status.
+                        Yujie Wu received <strong>her</strong> Bachelor's degree in Mechatronic Engineering from Shangqiu Institute of Technology. <strong>She</strong> is currently a Master's student in Mechanical Engineering at Hunan Agricultural University. <strong>Her</strong> current research direction is agricultural computer vision, focusing on monitoring the growth cycle of rapeseed in complex field environments based on image enhancement and segmentation techniques. <strong>She</strong> is dedicated to integrating <strong>her</strong> mechatronics engineering background with deep learning algorithms to overcome complex field illumination and occlusion interference, achieving accurate perception and analysis of rapeseed growth status.
                     </div>
                 </div>
             </div>
