@@ -11,6 +11,7 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
+        /* 导航栏 (适配更多按钮) */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
@@ -18,8 +19,11 @@
         nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
+        /* 主容器 */
         .main-container { max-width: 900px; margin: 60px auto; padding: 0 30px; }
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 60px; line-height: 1.2; letter-spacing: -0.5px; }
+        
+        /* 新闻列表 */
         .news-list { display: flex; flex-direction: column; gap: 45px; }
         .news-item { display: flex; flex-direction: column; }
         .news-date { font-size: 1.2em; font-weight: 600; color: #555; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e5231b; letter-spacing: 0.5px; }
@@ -27,6 +31,7 @@
         .news-card p { margin-bottom: 15px; }
         .news-card p:last-child { margin-bottom: 0; }
 
+        /* 移动端适配 */
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
@@ -60,7 +65,7 @@
         <h1 class="page-title">News</h1>
         <div class="news-list">
             
-            <!-- 2026-10 -->
+            <!-- 2026-10 (新增) -->
             <div class="news-item">
                 <div class="news-date">2026-10</div>
                 <div class="news-card">
@@ -68,7 +73,7 @@
                 </div>
             </div>
 
-            <!-- 2026-09 -->
+            <!-- 2026-09 (新增，合并多条) -->
             <div class="news-item">
                 <div class="news-date">2026-09</div>
                 <div class="news-card">
@@ -79,7 +84,7 @@
                 </div>
             </div>
 
-            <!-- 2026-08 -->
+            <!-- 2026-08 (新增) -->
             <div class="news-item">
                 <div class="news-date">2026-08</div>
                 <div class="news-card">
@@ -87,7 +92,7 @@
                 </div>
             </div>
 
-            <!-- 2026-07 -->
+            <!-- 2026-07 (新增，合并多条) -->
             <div class="news-item">
                 <div class="news-date">2026-07</div>
                 <div class="news-card">
@@ -96,7 +101,7 @@
                 </div>
             </div>
 
-            <!-- 2026-06 -->
+            <!-- 2026-06 (新增) -->
             <div class="news-item">
                 <div class="news-date">2026-06</div>
                 <div class="news-card">
@@ -104,7 +109,7 @@
                 </div>
             </div>
 
-            <!-- 2026-04 -->
+            <!-- 2026-04 (新增) -->
             <div class="news-item">
                 <div class="news-date">2026-04</div>
                 <div class="news-card">
@@ -112,12 +117,44 @@
                 </div>
             </div>
 
-            <!-- 2025-09 -->
+            <!-- 2025-09 (新增，合并多条) -->
             <div class="news-item">
                 <div class="news-date">2025-09</div>
                 <div class="news-card">
                     <p>Welcome <strong>Bin Zheng</strong> to our team! Your passion for computer vision and deep learning technology will bring a fresh perspective to our research on intelligent plant recognition and yield estimation.</p>
                     <p>Welcome <strong>Biao Chen</strong> to our team! Your exploration of the vibration abscission mechanism of oil tea fruits will bring a brand new engineering perspective to the optimization of our handheld harvesting devices.</p>
+                </div>
+            </div>
+
+            <!-- 2025-06 (保留原有) -->
+            <div class="news-item">
+                <div class="news-date">2025-06</div>
+                <div class="news-card">
+                    <p>Prof. Zhouzhou Zheng was awarded the "<strong>Outstanding Doctoral Dissertation</strong>" by Northwest A&F University for his Ph.D. thesis.</p>
+                </div>
+            </div>
+
+            <!-- 2024-12 (保留原有) -->
+            <div class="news-item">
+                <div class="news-date">2024-12</div>
+                <div class="news-card">
+                    <p>Prof. Zhouzhou Zheng successfully completed the National Construction of High-level University Public Graduate Program, finishing his one-year joint Ph.D. training at the Department of Bioresource Engineering, McGill University, Canada, and returned on schedule.</p>
+                </div>
+            </div>
+
+            <!-- 2024-06 (保留原有) -->
+            <div class="news-item">
+                <div class="news-date">2024-06</div>
+                <div class="news-card">
+                    <p>Our paper, "<strong>AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting</strong>," has been selected as an ESI Highly Cited Paper. This research marks significant progress in visual perception for key areas in winter jujube vibration harvesting.</p>
+                </div>
+            </div>
+
+            <!-- 2022-01 (保留原有) -->
+            <div class="news-item">
+                <div class="news-date">2022-01</div>
+                <div class="news-card">
+                    <p>The National Key R&D Program project "<strong>Breeding of New High-quality and High-yield Varieties of Jujube and Torreya and Precision Cultivation Technology</strong>" (2022YFD2200404) (in which our lab is a participant) has officially launched. The project period is from 2022 to 2027.</p>
                 </div>
             </div>
 
