@@ -12,10 +12,10 @@
         a:hover { text-decoration: underline; }
 
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
         .main-container { max-width: 900px; margin: 60px auto; padding: 0 30px; }
@@ -24,13 +24,12 @@
         .news-item { display: flex; flex-direction: column; }
         .news-date { font-size: 1.2em; font-weight: 600; color: #555; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e5231b; letter-spacing: 0.5px; }
         .news-card { background-color: #ffffff; border-radius: 8px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); font-size: 1.1em; color: #444; line-height: 1.8; text-align: justify; hyphens: auto; }
+        .news-card p { margin-bottom: 15px; }
+        .news-card p:last-child { margin-bottom: 0; }
 
-        /* 移动端适配 (修复导航栏隐藏问题) */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            nav a { font-size: 0.95em; }
-            
             .page-title { font-size: 36px; margin-bottom: 40px; }
             .news-date { font-size: 1.1em; }
             .news-card { padding: 20px; font-size: 1em; }
@@ -40,13 +39,17 @@
 <body>
     <header>
         <div class="nav-container">
-            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zheng Lab</div>
+            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zhouzhou Lab</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="news.html" class="active">News</a></li>
                     <li><a href="team.html">Team</a></li>
+                    <li><a href="leader.html">Leader</a></li>
                     <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                     <li><a href="joinus.html">Join Us</a></li>
                 </ul>
             </nav>
@@ -56,42 +59,68 @@
     <div class="main-container">
         <h1 class="page-title">News</h1>
         <div class="news-list">
+            
+            <!-- 2026-10 -->
             <div class="news-item">
-                <div class="news-date">2026-01</div>
+                <div class="news-date">2026-10</div>
                 <div class="news-card">
-                    Prof. Zhouzhou Zheng's projects, "<strong>Research on Energy Transfer Characteristics of Vibrating Branches and Mechanisms of Flower/Fruit Abscission in Oil Tea</strong>" (Hunan Provincial Natural Science Foundation for Youth, 2026JJ60165) and the "<strong>Yuelushan Laboratory Joint Talent Introduction Project</strong>" (2025RC2065), have been officially approved. The projects will run until 2028 and 2027, respectively.
+                    <p>Congratulations to our graduate students <strong>Yujie Wu, Wenbiao Tian, and Junyu Liu</strong> on being successfully elected as officers of the Graduate Student Union! This is a high recognition of your comprehensive abilities and leadership, and it also demonstrates the excellent holistic development of our team members. We look forward to seeing you shine in your new roles.</p>
                 </div>
             </div>
+
+            <!-- 2026-09 -->
             <div class="news-item">
-                <div class="news-date">2025-11</div>
+                <div class="news-date">2026-09</div>
                 <div class="news-card">
-                    Prof. Zhouzhou Zheng's project, "<strong>Mechanism of Flower and Fruit Transport and Abscission in Oil Tea Based on Trunk-Branch-Flower-Fruit-Leaf Interactions</strong>" (Excellent Youth Project of Hunan Provincial Department of Education, 25B0268), has been successfully approved.
+                    <p>Welcome <strong>Jiahui Fu</strong> to our team! Your dedication to the research of oil tea fruit vibration harvesting robots will bring strong technical support to our intelligent harvesting projects.</p>
+                    <p>Welcome <strong>Yujie Wu</strong> to our team! Your focus on agricultural computer vision and image segmentation technology will bring innovative vitality to our rapeseed growth cycle monitoring project.</p>
+                    <p>Congratulations to our undergraduate student <strong>Fang Zhang</strong> on being recommended for admission to Nanjing Agricultural University for her Master's studies in Mechanical Manufacturing and Automation! May you continue to maintain your passion for scientific research and exploration on your future academic path.</p>
+                    <p>Team leader Prof. Longsheng Fu provided comprehensive guidance on the group's recent work, pointing out the direction for future research and project advancement. The team members were greatly inspired.</p>
                 </div>
             </div>
+
+            <!-- 2026-08 -->
             <div class="news-item">
-                <div class="news-date">2025-06</div>
+                <div class="news-date">2026-08</div>
                 <div class="news-card">
-                    Prof. Zhouzhou Zheng was awarded the "<strong>Outstanding Doctoral Dissertation</strong>" by Northwest A&F University for his Ph.D. thesis.
+                    <p>Congratulations to our undergraduates <strong>Jing Hu, Jiachen Li, and Fang Zhang</strong> for winning the National Third Prize in the 19th National College Student Energy Conservation and Emission Reduction Social Practice and Science & Technology Competition! The work combined low-carbon photovoltaic drive with intelligent oil tea fruit counting, fully demonstrating the team's innovative practical ability in the integration of smart agriculture and green low-carbon technologies.</p>
                 </div>
             </div>
+
+            <!-- 2026-07 -->
             <div class="news-item">
-                <div class="news-date">2024-12</div>
+                <div class="news-date">2026-07</div>
                 <div class="news-card">
-                    Prof. Zhouzhou Zheng successfully completed the National Construction of High-level University Public Graduate Program, finishing his one-year joint Ph.D. training at the Department of Bioresource Engineering, McGill University, Canada, and returned on schedule.
+                    <p>Welcome <strong>Junjie Zhou</strong> to our team! Your passion for mechanical structure and vibration harvesting equipment will bring novel ideas to solving the challenges of mechanized oil tea fruit harvesting.</p>
+                    <p>Welcome <strong>Wenbiao Tian</strong> to our team! Your research on image enhancement and visual perception technology in complex environments will bring strong technical support to our precise seedling planting and ground feature recognition projects.</p>
                 </div>
             </div>
+
+            <!-- 2026-06 -->
             <div class="news-item">
-                <div class="news-date">2024-06</div>
+                <div class="news-date">2026-06</div>
                 <div class="news-card">
-                    Our paper, "<strong>AGHRNet: An attention ghost-HRNet for confirmation of catch-and-shake locations in jujube fruits vibration harvesting</strong>," has been selected as an ESI Highly Cited Paper. This research marks significant progress in visual perception for key areas in winter jujube vibration harvesting.
+                    <p>Welcome <strong>Junyu Liu</strong> to our team! Your expertise in ROS2 systems and visual-manipulator collaboration will inject strong technical momentum into our intelligent harvesting robot development.</p>
                 </div>
             </div>
+
+            <!-- 2026-04 -->
             <div class="news-item">
-                <div class="news-date">2022-01</div>
+                <div class="news-date">2026-04</div>
                 <div class="news-card">
-                    The National Key R&D Program project "<strong>Breeding of New High-quality and High-yield Varieties of Jujube and Torreya and Precision Cultivation Technology</strong>" (2022YFD2200404) (in which our lab is a participant) has officially launched. The project period is from 2022 to 2027.
+                    <p>Congratulations to <strong>Bin Zheng</strong> on the official publication of his paper "<strong>Autonomous Navigation of Orchard Harvesting Robot via Light-weight Salient Object Detection</strong>" in a CAS Zone 2 journal! This research provides an innovative solution for lightweight visual perception and autonomous navigation of orchard harvesting robots.</p>
                 </div>
             </div>
+
+            <!-- 2025-09 -->
+            <div class="news-item">
+                <div class="news-date">2025-09</div>
+                <div class="news-card">
+                    <p>Welcome <strong>Bin Zheng</strong> to our team! Your passion for computer vision and deep learning technology will bring a fresh perspective to our research on intelligent plant recognition and yield estimation.</p>
+                    <p>Welcome <strong>Biao Chen</strong> to our team! Your exploration of the vibration abscission mechanism of oil tea fruits will bring a brand new engineering perspective to the optimization of our handheld harvesting devices.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
