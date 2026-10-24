@@ -11,12 +11,12 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* 导航栏 */
+        /* 导航栏 (适配更多按钮) */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.4em; font-weight: 700; color: #222; display: flex; align-items: center; }
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav a { color: #333; font-size: 1.05em; font-weight: 400; transition: color 0.2s; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
         /* 主体布局 */
@@ -25,20 +25,20 @@
         .profile-img { width: 100%; border: 1px solid #eaeaea; padding: 5px; background-color: #fff; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 25px; display: block; object-fit: cover; aspect-ratio: 3/4; }
         
         .sidebar-info { list-style: none; margin-top: 20px; }
-        .sidebar-info li { margin-bottom: 15px; font-size: 1em; color: #555; display: flex; align-items: flex-start; line-height: 1.4; }
-        .sidebar-info .icon { width: 25px; margin-right: 10px; font-size: 1.2em; color: #222; text-align: center; }
+        .sidebar-info li { margin-bottom: 15px; font-size: 0.95em; color: #555; display: flex; align-items: flex-start; line-height: 1.4; }
+        .sidebar-info .icon { width: 25px; margin-right: 10px; font-size: 1.1em; color: #222; text-align: center; }
         .sidebar-info a { color: #555; }
         .sidebar-info a:hover { color: #1a73e8; text-decoration: none; }
 
         /* 右侧内容 */
         .content { flex: 1; min-width: 0; }
-        .content h1 { font-size: 2.4em; font-weight: 700; color: #222; margin-bottom: 15px; }
-        .subtitle { font-size: 1.2em; color: #666; margin-bottom: 5px; }
-        .institution { font-size: 1.1em; color: #666; margin-bottom: 25px; }
-        .bio { font-size: 1.1em; color: #444; margin-bottom: 30px; text-align: justify; line-height: 1.8; }
+        .content h1 { font-size: 2.2em; font-weight: 700; color: #222; margin-bottom: 15px; }
+        .subtitle { font-size: 1.15em; color: #666; margin-bottom: 5px; }
+        .institution { font-size: 1.05em; color: #666; margin-bottom: 25px; }
+        .bio { font-size: 1.05em; color: #444; margin-bottom: 30px; text-align: justify; line-height: 1.8; }
         .content h2 { font-size: 1.15em; font-weight: 700; color: #222; margin-bottom: 20px; }
         .interest-list { list-style: none; margin-bottom: 40px; }
-        .interest-list li { margin-bottom: 15px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
+        .interest-list li { margin-bottom: 12px; position: relative; padding-left: 25px; color: #444; font-size: 1.05em; }
         .interest-list li::before { content: "▶"; position: absolute; left: 0; top: 2px; color: #888; font-size: 0.8em; }
 
         /* ====== 横向滑动相册 ====== */
@@ -55,8 +55,6 @@
         .recruit-title { font-size: 1.8em; font-weight: 700; color: #222; border-left: 6px solid #e5231b; padding-left: 12px; margin-bottom: 25px; line-height: 1.2; }
         .recruit-subtitle { font-size: 1.1em; font-weight: 700; color: #222; margin-bottom: 15px; }
         .recruit-text { font-size: 1.05em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: justify; }
-        
-        /* 保留奖学金模板的样式用于排版导师信息 */
         .scholarship-title { font-size: 1.05em; color: #777; margin-bottom: 15px; margin-top: 20px; font-weight: 600;}
         .scholarship-row { display: flex; align-items: flex-start; margin-bottom: 15px; font-size: 1.05em; line-height: 1.6; }
         .scholarship-degree { flex: 0 0 160px; font-weight: 600; color: #333; }
@@ -66,7 +64,6 @@
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
-            nav a { font-size: 0.95em; }
             .main-container { flex-direction: column; gap: 40px; margin-top: 20px; }
             .sidebar { flex: auto; position: static; width: 100%; max-width: 300px; margin: 0 auto; }
             .content h1 { font-size: 2em; }
@@ -85,7 +82,11 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="team.html">Team</a></li>
+                    <li><a href="leader.html">Leader</a></li>
                     <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
                     <li><a href="joinus.html">Join Us</a></li>
                 </ul>
             </nav>
@@ -95,7 +96,6 @@
     <div class="main-container">
         <aside class="sidebar">
             <img src="zheng.jpg" alt="Zhouzhou Zheng" class="profile-img">
-            
             <ul class="sidebar-info">
                 <li><span class="icon"><i class="fa-brands fa-google"></i></span> <a href="https://scholar.google.com/citations?user=hQRJr38AAAAJ&hl=en" target="_blank">Google Scholar</a></li>
                 <li><span class="icon"><i class="fa-brands fa-orcid"></i></span> <a href="https://orcid.org/0000-0002-0822-1436" target="_blank">ORCID</a></li>
@@ -114,14 +114,13 @@
             
             <h2>Specifically, my research interests include:</h2>
             <ul class="interest-list">
-                <li>Orchard harvesting robots and catch-and-shake strategies.</li>
-                <li>Multi-modal sensor fusion and complex environment target detection.</li>
+                <li>Orchard harvesting robots and information perception technology.</li>
+                <li>Multi-modal fusion and advanced sensors.</li>
                 <li>Fruit tree phenotyping based on deep learning.</li>
-                <li>Vibration harvesting mechanism and equipment optimization for oil tea.</li>
-                <li>Agricultural robotics and automation.</li>
+                <li>Mechanisms of fruit tree vibration harvesting.</li>
+                <li>Agricultural robotics and harvesting equipment.</li>
             </ul>
 
-            <!-- 横向滑动相册区 -->
             <div class="photo-gallery">
                 <div class="photo-scroll-container">
                     <video src="lab_video1.mp4" class="photo-scroll-item" controls muted playsinline autoplay loop></video>
@@ -134,27 +133,21 @@
                 </div>
             </div>
 
-            <!-- Recruiting 板块 -->
             <div class="recruit-section">
                 <h2 class="recruit-title">Recruiting</h2>
                 <p class="recruit-subtitle">For Prospective Students / Postdocs</p>
                 <p class="recruit-text">
                     I am actively looking for strong and motivated students in the areas of deep learning, computer vision, agricultural robotics, and digital agriculture. Also, we welcome CSC-supported visiting students and professors. If you are interested in my research, please send me an <a href="mailto:zhengzz@hunau.edu.cn">email</a> with the subject of "Prospective PhD/Master student [Your name]", or apply through the <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a> system and mention me in your application. Due to the large volume of emails, I apologize for not replying to individual inquiries I have received.
                 </p>
-                
-                <!-- 替换后的导师信息部分 -->
                 <p class="scholarship-title">Supervisor Information :</p>
-                
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>PhD</strong> :</div>
                     <div class="scholarship-links">Prof. Longsheng Fu</div>
                 </div>
-                
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>Master</strong> :</div>
                     <div class="scholarship-links">Dr. Zhouzhou Zheng</div>
                 </div>
-                
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>Undergraduate</strong> :</div>
                     <div class="scholarship-links">Dr. Zhouzhou Zheng</div>
