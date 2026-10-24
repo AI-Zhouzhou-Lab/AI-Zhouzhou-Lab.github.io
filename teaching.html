@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching | Zhouzhou Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; }
+        header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; text-decoration: none; }
+        nav a:hover, nav a.active { color: #c8232c; }
 
+        .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
+        .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
+        
+        /* 课程列表样式 */
+        .course-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .course-item {
+            display: flex;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .course-code {
+            flex: 0 0 150px; /* 固定左侧代码宽度 */
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .course-desc {
+            flex: 1;
+        }
+
+        @media (max-width: 900px) {
+            .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .page-title { font-size: 36px; }
+            .course-item { flex-direction: column; gap: 5px; }
+            .course-code { flex: none; font-size: 0.9em; color: #888; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo"><span style="color: #c8232c; font-weight: 800; font-family: 'Times New Roman', serif; letter-spacing: 1px; margin-right: 8px;">HUNAU</span> Zhouzhou Lab</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="leader.html">Leader</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="teaching.html" class="active">Teaching</a></li>
+                    <li><a href="dataset.html">Dataset</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="joinus.html">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <h1 class="page-title">Teaching</h1>
+
+        <ul class="course-list">
+            <!-- 你可以把左侧的课程代码换成真实的代码 -->
+            <li class="course-item">
+                <div class="course-code">Course 101</div>
+                <div class="course-desc">Image Recognition and Fundamentals of Agricultural Machine Vision (32 credit hours)</div>
+            </li>
+            
+            <li class="course-item">
+                <div class="course-code">Course 102</div>
+                <div class="course-desc">Intelligent Agricultural Machinery and Equipment (64 credit hours)</div>
+            </li>
+            
+            <li class="course-item">
+                <div class="course-code">Course 103</div>
+                <div class="course-desc">Mechanical Fault Diagnosis and Decision Making (32 credit hours)</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
