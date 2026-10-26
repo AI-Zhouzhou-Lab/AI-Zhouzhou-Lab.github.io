@@ -18,6 +18,12 @@
         .main-container { max-width: 1000px; margin: 50px auto; padding: 0 30px; }
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 50px; line-height: 1.2; }
         
+        /* 新增分类标题样式 */
+        .team-section { margin-bottom: 60px; }
+        .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
+        .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
+        .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
+
         /* 证书网格布局 */
         .cert-grid {
             display: grid;
@@ -75,24 +81,38 @@
     <div class="main-container">
         <h1 class="page-title">Certificates</h1>
 
-        <div class="cert-grid">
-            <!-- 证书 1 -->
-            <div class="cert-item">
-                <img src="https://via.placeholder.com/800x600?text=Certificate+1" alt="Certificate 1" class="cert-img">
+        <!-- ================= 比赛/竞赛类 ================= -->
+        <div class="team-section">
+            <div class="section-header">
+                <i class="fas fa-trophy"></i>
+                <h2>Competitions/Awards</h2>
             </div>
-            <!-- 证书 2 -->
-            <div class="cert-item">
-                <img src="https://via.placeholder.com/800x600?text=Certificate+2" alt="Certificate 2" class="cert-img">
-            </div>
-            <!-- 证书 3 -->
-            <div class="cert-item">
-                <img src="https://via.placeholder.com/800x600?text=Certificate+3" alt="Certificate 3" class="cert-img">
-            </div>
-            <!-- 证书 4 -->
-            <div class="cert-item">
-                <img src="https://via.placeholder.com/800x600?text=Certificate+4" alt="Certificate 4" class="cert-img">
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <img src="https://via.placeholder.com/800x600?text=Competition+Certificate+1" alt="Competition 1" class="cert-img">
+                </div>
+                <div class="cert-item">
+                    <img src="https://via.placeholder.com/800x600?text=Competition+Certificate+2" alt="Competition 2" class="cert-img">
+                </div>
             </div>
         </div>
+
+        <!-- ================= 科研成果类 ================= -->
+        <div class="team-section">
+            <div class="section-header">
+                <i class="fas fa-file-alt"></i>
+                <h2>Research Achievements</h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <img src="https://via.placeholder.com/800x600?text=Research+Certificate+1" alt="Research 1" class="cert-img">
+                </div>
+                <div class="cert-item">
+                    <img src="https://via.placeholder.com/800x600?text=Research+Certificate+2" alt="Research 2" class="cert-img">
+                </div>
+            </div>
+        </div>
+        
     </div>
 </body>
 </html>
