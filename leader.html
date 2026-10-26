@@ -25,12 +25,7 @@
         
         /* 成员卡片布局 */
         .team-section { margin-bottom: 60px; }
-        .section-header { display: flex; align-items: center; border-bottom: 2px solid #e5231b; padding-bottom: 10px; margin-bottom: 30px; }
-        .section-header i { color: #e5231b; font-size: 1.5em; margin-right: 15px; }
-        .section-header h2 { font-size: 1.8em; font-weight: 700; color: #222; margin-right: 15px; }
-        
         .member-item { display: flex; gap: 40px; margin-bottom: 60px; }
-        /* 修改了这里，背景色设为透明，适应真实照片 */
         .member-photo { flex: 0 0 220px; height: 280px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background-color: #eaeaea;}
         .member-info { flex: 1; }
         
@@ -40,8 +35,16 @@
         .homepage-link { font-size: 0.5em; font-weight: normal; background-color: #eef2f5; padding: 4px 10px; border-radius: 4px; border: 1px solid #ddd; transition: all 0.2s; }
         .homepage-link:hover { background-color: #1a73e8; color: #fff; text-decoration: none; }
         
-        .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; }
+        /* 简介文字 */
+        .member-desc { color: #555; font-size: 1.05em; line-height: 1.8; text-align: justify; margin-bottom: 20px;}
         .member-desc p { margin-bottom: 10px; }
+
+        /* ====== 新增：联系方式行样式 ====== */
+        .contact-row { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.95em; color: #555; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ddd; }
+        .contact-item { display: flex; align-items: center; gap: 6px; }
+        .contact-item i { color: #222; font-size: 1.1em; }
+        .contact-item a { color: #555; }
+        .contact-item a:hover { color: #1a73e8; text-decoration: none;}
 
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
@@ -51,6 +54,7 @@
             .member-info { text-align: center; }
             .member-desc { text-align: left; }
             .name-wrapper { justify-content: center; }
+            .contact-row { flex-direction: column; align-items: center; gap: 10px; }
             .page-title { font-size: 36px; }
         }
     </style>
@@ -82,34 +86,56 @@
             
             <!-- ====== 傅隆生 教授 ====== -->
             <div class="member-item">
-                <!-- 已经替换为真实照片 -->
                 <img src="Fulongsheng.jpg" alt="Prof. Longsheng Fu" class="member-photo">
                 <div class="member-info">
                     <div class="name-wrapper">
                         <h3 class="member-name">Prof. Longsheng Fu</h3>
-                        <!-- 超链接地址目前为 #，请替换为他的真实主页网址 -->
-                        <a href="#" target="_blank" class="homepage-link">[Homepage]</a>
+                        <!-- 替换为真实的主页链接 -->
+                        <a href="https://smart-ag.github.io/" target="_blank" class="homepage-link"><i class="fas fa-globe"></i> Homepage</a>
                     </div>
                     <div class="member-desc">
                         <p>Prof. Longsheng Fu is a Professor and Ph.D. Supervisor, selected for the National Talent Program (Smart Agriculture) and Shaanxi Young Outstanding Talents. He serves as the Editor-in-Chief of <em>Computers and Electronics in Agriculture</em> (CAS Zone 1 Top).</p>
                         <p>His research focuses on smart agriculture technologies and equipment, specifically full-process intelligent orchard production robots (such as kiwifruit thinning, pollination, fruit thinning, harvesting, and pruning robots). He has led over 10 enterprise cooperation projects and developed multiple prototype products. He has published over 62 SCI papers as the first/corresponding author (including 8 ESI Highly Cited Papers) and has been continuously recognized as one of the World's Top 2% Scientists and a Highly Cited Chinese Researcher by Elsevier. He holds 14 authorized Chinese invention patents.</p>
+                    </div>
+                    
+                    <!-- 傅老师联系方式 -->
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> 
+                            <a href="mailto:fulsh@nwafu.edu.cn">fulsh@nwafu.edu.cn</a> / 
+                            <a href="mailto:ls.fu@outlook.com">ls.fu@outlook.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i> 
+                            <a href="https://scholar.google.com/citations?user=YQI1lIkAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-researchgate"></i> 
+                            <a href="https://www.researchgate.net/profile/Longsheng_Fu" target="_blank">ResearchGate</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- ====== 吴明亮 院长 ====== -->
             <div class="member-item">
-                <!-- 占位照片，等有了真实照片后再替换 -->
                 <img src="https://via.placeholder.com/400x500?text=Prof.+Mingliang+Wu" alt="Prof. Mingliang Wu" class="member-photo">
                 <div class="member-info">
                     <div class="name-wrapper">
                         <h3 class="member-name">Prof. Mingliang Wu (Dean)</h3>
-                        <!-- 超链接地址目前为 #，请替换为他的真实主页网址 -->
-                        <a href="#" target="_blank" class="homepage-link">[Homepage]</a>
+                        <a href="#" target="_blank" class="homepage-link"><i class="fas fa-globe"></i> Homepage</a>
                     </div>
                     <div class="member-desc">
                         <p>Prof. Mingliang Wu is a Ph.D., Second-level Professor, and Ph.D. Supervisor, currently serving as the Dean of the College of Mechanical and Electrical Engineering at Hunan Agricultural University. He is also an expert panel member of the Ministry of Agriculture and Rural Affairs and a mechanical expert for the Hunan Rapeseed Industry Technology System.</p>
                         <p>His research focuses on the innovative design and experimental research of agricultural machinery, specifically dedicating to the mechanized production technology and equipment for oil crops (especially rapeseed). He has led over 10 national and provincial-level projects. He has received four Second Prizes for Scientific and Technological Progress from Hunan Province, holds 32 authorized invention patents, and has published over 65 academic papers.</p>
+                    </div>
+                    
+                    <!-- 吴院长联系方式 -->
+                    <div class="contact-row">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> 
+                            <a href="mailto:mlwu@hunau.edu.cn">mlwu@hunau.edu.cn</a>
+                        </div>
                     </div>
                 </div>
             </div>
