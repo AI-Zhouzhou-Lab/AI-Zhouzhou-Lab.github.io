@@ -11,7 +11,6 @@
         a { color: #1a73e8; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* 导航栏 (适配更多按钮) */
         header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .nav-container { max-width: 1200px; margin: 0 auto; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.3em; font-weight: 700; color: #222; display: flex; align-items: center; }
@@ -19,11 +18,9 @@
         nav a { color: #333; font-size: 0.95em; font-weight: 500; transition: color 0.2s; }
         nav a:hover, nav a.active { color: #c8232c; text-decoration: none; }
 
-        /* 主容器 */
         .main-container { max-width: 900px; margin: 60px auto; padding: 0 30px; }
         .page-title { font-size: 48px; font-weight: 700; color: #222; border-left: 8px solid #e5231b; padding-left: 15px; margin-bottom: 60px; line-height: 1.2; letter-spacing: -0.5px; }
         
-        /* 新闻列表 */
         .news-list { display: flex; flex-direction: column; gap: 45px; }
         .news-item { display: flex; flex-direction: column; }
         .news-date { font-size: 1.2em; font-weight: 600; color: #555; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e5231b; letter-spacing: 0.5px; }
@@ -31,7 +28,6 @@
         .news-card p { margin-bottom: 15px; }
         .news-card p:last-child { margin-bottom: 0; }
 
-        /* 移动端适配 */
         @media (max-width: 900px) {
             .nav-container { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
@@ -65,7 +61,7 @@
         <h1 class="page-title">News</h1>
         <div class="news-list">
             
-            <!-- 2026-10 (新增) -->
+            <!-- 2026-10 -->
             <div class="news-item">
                 <div class="news-date">2026-10</div>
                 <div class="news-card">
@@ -73,7 +69,7 @@
                 </div>
             </div>
 
-            <!-- 2026-09 (新增，合并多条) -->
+            <!-- 2026-09 -->
             <div class="news-item">
                 <div class="news-date">2026-09</div>
                 <div class="news-card">
@@ -84,7 +80,15 @@
                 </div>
             </div>
 
-            <!-- 2026-08 (新增) -->
+            <!-- 新增的 2026-08 论文新闻 -->
+            <div class="news-item">
+                <div class="news-date">2026-08</div>
+                <div class="news-card">
+                    <p>Congratulations to Prof. Zhouzhou Zheng (Corresponding Author) and co-authors on the publication of their review paper "<strong>A review of visual occlusion resolution in agricultural environments: Algorithms, applications, and future trends</strong>" in <em>Smart Agricultural Technology</em>! This comprehensive review systematically summarizes cutting-edge algorithms for agricultural visual occlusion and provides profound insights into future research directions.</p>
+                </div>
+            </div>
+
+            <!-- 原有的 2026-08 竞赛新闻 -->
             <div class="news-item">
                 <div class="news-date">2026-08</div>
                 <div class="news-card">
@@ -92,7 +96,7 @@
                 </div>
             </div>
 
-            <!-- 2026-07 (新增，合并多条) -->
+            <!-- 2026-07 -->
             <div class="news-item">
                 <div class="news-date">2026-07</div>
                 <div class="news-card">
@@ -101,7 +105,7 @@
                 </div>
             </div>
 
-            <!-- 2026-06 (新增) -->
+            <!-- 2026-06 -->
             <div class="news-item">
                 <div class="news-date">2026-06</div>
                 <div class="news-card">
@@ -109,7 +113,7 @@
                 </div>
             </div>
 
-            <!-- 2026-04 (新增) -->
+            <!-- 2026-04 -->
             <div class="news-item">
                 <div class="news-date">2026-04</div>
                 <div class="news-card">
@@ -117,7 +121,7 @@
                 </div>
             </div>
 
-            <!-- 2025-09 (新增，合并多条) -->
+            <!-- 2025-09 -->
             <div class="news-item">
                 <div class="news-date">2025-09</div>
                 <div class="news-card">
@@ -126,7 +130,7 @@
                 </div>
             </div>
 
-            <!-- 2025-06 (保留原有) -->
+            <!-- 2025-06 -->
             <div class="news-item">
                 <div class="news-date">2025-06</div>
                 <div class="news-card">
@@ -134,7 +138,7 @@
                 </div>
             </div>
 
-            <!-- 2024-12 (保留原有) -->
+            <!-- 2024-12 -->
             <div class="news-item">
                 <div class="news-date">2024-12</div>
                 <div class="news-card">
@@ -142,7 +146,7 @@
                 </div>
             </div>
 
-            <!-- 2024-06 (保留原有) -->
+            <!-- 2024-06 -->
             <div class="news-item">
                 <div class="news-date">2024-06</div>
                 <div class="news-card">
@@ -150,7 +154,7 @@
                 </div>
             </div>
 
-            <!-- 2022-01 (保留原有) -->
+            <!-- 2022-01 -->
             <div class="news-item">
                 <div class="news-date">2022-01</div>
                 <div class="news-card">
