@@ -56,8 +56,10 @@
         .recruit-subtitle { font-size: 1.1em; font-weight: 700; color: #222; margin-bottom: 15px; }
         .recruit-text { font-size: 1.05em; color: #555; line-height: 1.8; margin-bottom: 20px; text-align: justify; }
         .scholarship-title { font-size: 1.05em; color: #777; margin-bottom: 15px; margin-top: 20px; font-weight: 600;}
+        
+        /* 修改了这里的宽度，并加上 nowrap 防止换行 */
         .scholarship-row { display: flex; align-items: flex-start; margin-bottom: 15px; font-size: 1.05em; line-height: 1.6; }
-        .scholarship-degree { flex: 0 0 180px; font-weight: 600; color: #333; }
+        .scholarship-degree { flex: 0 0 240px; font-weight: 600; color: #333; white-space: nowrap; }
         .scholarship-links { color: #444; }
 
         /* 移动端适配 */
@@ -68,7 +70,7 @@
             .sidebar { flex: auto; position: static; width: 100%; max-width: 300px; margin: 0 auto; }
             .content h1 { font-size: 2em; }
             .scholarship-row { flex-direction: column; gap: 5px; }
-            .scholarship-degree { flex: none; }
+            .scholarship-degree { flex: none; white-space: normal; }
             .photo-scroll-item { height: 160px; }
         }
     </style>
@@ -137,18 +139,16 @@
                 <h2 class="recruit-title">Recruiting</h2>
                 <p class="recruit-subtitle">For Prospective Students / Postdocs</p>
                 <p class="recruit-text">
-                   We are actively recruiting self-motivated Master's and PhD students, and research interns with a strong background in agricultural engineering, agricultural robotics, machine vision, and deep learning.Additionally, we are actively recruiting highly motivated undergraduates from across the university who are interested in robotics, automatic control, and image recognition. By joining us, you will not only gain hands-on experience in agricultural robot development but also have the opportunity to participate in major science and technology competitions, earn academic bonus points, and significantly strengthen your resume for graduate school applications.  If you are interested in my research, please send me an <a href="mailto:zhengzz@hunau.edu.cn">email</a> with the subject of "Prospective PhD/Master student [Your name]", or apply through the <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a> system and mention me in your application. Due to the large volume of emails, I apologize for not replying to individual inquiries I have received.
+                   We are actively recruiting self-motivated Master's and PhD students, and research interns with a strong background in agricultural engineering, agricultural robotics, machine vision, and deep learning. Additionally, we are actively recruiting highly motivated undergraduates from across the university who are interested in robotics, automatic control, and image recognition. By joining us, you will not only gain hands-on experience in agricultural robot development but also have the opportunity to participate in major science and technology competitions, earn academic bonus points, and significantly strengthen your resume for graduate school applications. If you are interested in my research, please send me an <a href="mailto:zhengzz@hunau.edu.cn">email</a> with the subject of "Prospective PhD/Master student [Your name]", or apply through the <a href="https://www.hunau.edu.cn/" target="_blank">Hunan Agricultural University</a> system and mention me in your application. Due to the large volume of emails, I apologize for not replying to individual inquiries I have received.
                 </p>
                 
                 <p class="scholarship-title">Supervisor Information :</p>
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>PhD Supervisor</strong> :</div>
-                    <!-- 添加了跳转到 leader.html 的超链接 -->
                     <div class="scholarship-links"><a href="leader.html">Prof. Longsheng Fu</a></div>
                 </div>
                 <div class="scholarship-row">
                     <div class="scholarship-degree">for <strong>Master Supervisor</strong> :</div>
-                    <!-- 添加了超链接 -->
                     <div class="scholarship-links"><a href="leader.html">Prof. Longsheng Fu</a> & Dr. Zhouzhou Zheng</div>
                 </div>
                 <div class="scholarship-row">
